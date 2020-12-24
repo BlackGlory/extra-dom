@@ -49,5 +49,5 @@ function parseNode(str: string): Node[]
 ### stringifyNode
 
 ```ts
-function stringifyNode(node: Node): string
+function stringifyNode(...nodes: Node[]): string
 ```
