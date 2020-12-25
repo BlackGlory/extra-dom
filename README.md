@@ -51,3 +51,9 @@ function parseNode(str: string): Node[]
 ```ts
 function stringifyNode(...nodes: Node[]): string
 ```
+
+### removeAllChildren
+
+```ts
+function removeAllChildren(node: Node): void
+```

@@ -4,3 +4,5 @@ export * from './filter'
 
 export * from './parse-node'
 export * from './stringify-node'
+
+export * from './remove-all-children'
