@@ -12,14 +12,6 @@ yarn add extra-dom
 
 ## API
 
-### map
-
-```ts
-function map(node: Node, fn: (node: Node) => Node): Node
-```
-
-Traverse the node tree and do `map`.
-
 ### flatMap
 
 ```ts
@@ -32,28 +24,58 @@ Traverse the node tree and do `flatMap`.
 - `[node]`: replace current node
 - `[node1, node2, ...nodeN]`: replace current node with more nodes
 
+### map
+
+```ts
+function map(node: Node, fn: (node: Node) => Node): Node
+```
+
+Traverse the node tree and do `map`.
+
 ### filter
 
 ```ts
-function filter(node: Node, fn: (node: Node) => boolean): Node | null
+function filter(node: Node, predicate: (node: Node) => boolean): Node | null
 ```
 
 Traverse the node tree and do `filter`.
 
-### parseNode
+### unwrap
 
 ```ts
-function parseNode(str: string): Node[]
+function unwrap(node: Node, predicate: (node: Node) => boolean): Node[]
 ```
 
-### stringifyNode
+Traverse the node tree and do `unwrap`.
+
+### parse
 
 ```ts
-function stringifyNode(...nodes: Node[]): string
+function parse(html: string): Node[]
 ```
+
+### stringify
+
+```ts
+function stringify(nodes: Node[]): string
+```
+
+### normalize
+
+```ts
+function normalize(html: string): string
+```
+
+It is the shortcut for `stringify(parse(html))`.
 
 ### removeAllChildren
 
 ```ts
 function removeAllChildren(node: Node): void
+```
+
+### removeAttributes
+
+```ts
+function removeAttributes(node: Node, predicate: (name: string) => boolean): void
 ```

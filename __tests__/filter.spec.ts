@@ -1,10 +1,10 @@
 import { filter } from '@src/filter'
-import { parseNode } from '@src/parse-node'
-import { stringifyNode } from '@src/stringify-node'
+import { parse } from '@src/parse'
+import { stringify } from '@src/stringify'
 
 describe('filter', () => {
   it('is preorder', () => {
-    const root = parseNode('<p><em>text</em></p>')[0]
+    const root = parse('<p><em>text</em></p>')[0]
 
     const result: string[] = []
     filter(root, node => {
@@ -16,7 +16,7 @@ describe('filter', () => {
   })
 
   it('is DFS', () => {
-    const root = parseNode('<p><em>deep</em>shallow</p>')[0]
+    const root = parse('<p><em>deep</em>shallow</p>')[0]
 
     const result: string[] = []
     filter(root, node => {
@@ -28,7 +28,7 @@ describe('filter', () => {
   })
 
   it('clone nodes', () => {
-    const root = parseNode('<p><em>text</em></p>')[0]
+    const root = parse('<p><em>text</em></p>')[0]
 
     const result = filter(root, _ => true)!
 
@@ -38,17 +38,17 @@ describe('filter', () => {
 
   describe('reject children', () => {
     it('return Node', () => {
-      const root = parseNode('<p><em></em></p>')[0]
+      const root = parse('<p><em></em></p>')[0]
 
       const result = filter(root, node => node.nodeName !== 'EM')!
 
-      expect(stringifyNode(result)).toBe('<p></p>')
+      expect(stringify([result])).toBe('<p></p>')
     })
   })
 
   describe('reject root', () => {
     it('return null', () => {
-      const root = parseNode('<p><em></em></p>')[0]
+      const root = parse('<p><em></em></p>')[0]
 
       const result = filter(root, node => node.nodeName !== 'P')
 

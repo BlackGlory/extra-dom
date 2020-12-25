@@ -1,8 +1,8 @@
 import { flatMap } from './flat-map'
 
-export function filter(node: Node, fn: (node: Node) => boolean): Node | null {
+export function filter(node: Node, predicate: (node: Node) => boolean): Node | null {
   const results = flatMap(node, node => {
-    if (fn(node)) {
+    if (predicate(node)) {
       return [node]
     } else {
       return []

@@ -1,10 +1,10 @@
 import { flatMap } from '@src/flat-map'
-import { parseNode } from '@src/parse-node'
-import { stringifyNode } from '@src/stringify-node'
+import { parse } from '@src/parse'
+import { stringify } from '@src/stringify'
 
 describe('flatMap', () => {
   it('is preorder', () => {
-    const root = parseNode('<p><em>text</em></p>')[0]
+    const root = parse('<p><em>text</em></p>')[0]
 
     const result: string[] = []
     flatMap(root, node => {
@@ -16,7 +16,7 @@ describe('flatMap', () => {
   })
 
   it('is DFS', () => {
-    const root = parseNode('<p><em>deep</em>shallow</p>')[0]
+    const root = parse('<p><em>deep</em>shallow</p>')[0]
 
     const result: string[] = []
     flatMap(root, node => {
@@ -28,7 +28,7 @@ describe('flatMap', () => {
   })
 
   it('clone nodes', () => {
-    const root = parseNode('<p><em>text</em></p>')[0]
+    const root = parse('<p><em>text</em></p>')[0]
 
     const result = flatMap(root, node => [node])
 
@@ -37,7 +37,7 @@ describe('flatMap', () => {
   })
 
   it('flat-map', () => {
-    const root = parseNode('<p><em>text</em></p>')[0]
+    const root = parse('<p><em>text</em></p>')[0]
 
     const result = flatMap(root, node => {
       if (node.nodeName === 'EM') {
@@ -51,16 +51,16 @@ describe('flatMap', () => {
       }
     })
 
-    expect(stringifyNode(...result)).toBe('<p>hello world</p>')
+    expect(stringify(result)).toBe('<p>hello world</p>')
   })
 
   describe('edges', () => {
     it('can return the same nodes', () => {
-      const root = parseNode('<p>before<em>text</em>after</p>')[0]
+      const root = parse('<p>before<em>text</em>after</p>')[0]
 
       const result = flatMap(root, node => [node])
 
-      expect(stringifyNode(...result)).toBe('<p>before<em>text</em>after</p>')
+      expect(stringify(result)).toBe('<p>before<em>text</em>after</p>')
     })
   })
 })

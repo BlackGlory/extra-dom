@@ -1,15 +1,15 @@
-import { map } from '@src/map'
+import { unwrap } from '@src/unwrap'
 import { parse } from '@src/parse'
 import { stringify } from '@src/stringify'
 
-describe('map', () => {
+describe('unwrap', () => {
   it('is preorder', () => {
     const root = parse('<p><em>text</em></p>')[0]
 
     const result: string[] = []
-    map(root, node => {
+    unwrap(root, node => {
       result.push(node.nodeName)
-      return node
+      return false
     })
 
     expect(result).toEqual(['P', 'EM', '#text'])
@@ -19,9 +19,9 @@ describe('map', () => {
     const root = parse('<p><em>deep</em>shallow</p>')[0]
 
     const result: string[] = []
-    map(root, node => {
+    unwrap(root, node => {
       if (node.nodeType === Node.TEXT_NODE) result.push(node.textContent!)
-      return node
+      return false
     })
 
     expect(result).toEqual(['deep', 'shallow'])
@@ -30,23 +30,17 @@ describe('map', () => {
   it('clone nodes', () => {
     const root = parse('<p><em>text</em></p>')[0]
 
-    const result = map(root, node => node)
+    const result = unwrap(root, _ => false)!
 
-    expect(result).not.toBe(root)
-    expect(result.isEqualNode(root)).toBeTruthy()
+    expect(result[0]).not.toBe(root)
+    expect(result[0].isEqualNode(root)).toBeTruthy()
   })
 
-  it('map', () => {
-    const root = parse('<p><em>text</em></p>')[0]
+  it('unwrap', () => {
+    const root = parse('<div><span>text</span></div>')[0]
 
-    const result = map(root, node => {
-      if (node.nodeName === 'EM') {
-        return node.childNodes[0]
-      } else {
-        return node
-      }
-    })
+    const result = unwrap(root, node => node instanceof Element)
 
-    expect(stringify([result])).toBe('<p>text</p>')
+    expect(stringify(result)).toBe('text')
   })
 })
