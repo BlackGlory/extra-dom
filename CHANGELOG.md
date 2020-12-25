@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/BlackGlory/extra-dom/compare/v0.1.2...v0.2.0) (2020-12-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* rewrite
+
+### Features
+
+* add simplify ([f642ffd](https://github.com/BlackGlory/extra-dom/commit/f642ffd131d0dfe8378bf4065c1e3f294e714d9c))
+* split simplify ([8827bba](https://github.com/BlackGlory/extra-dom/commit/8827bbad9191b49a91f2271f32a79f7f259eb14c))
+
 ### [0.1.2](https://github.com/BlackGlory/extra-dom/compare/v0.1.1...v0.1.2) (2020-12-25)
 
 
