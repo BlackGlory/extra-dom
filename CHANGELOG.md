@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/BlackGlory/extra-dom/compare/v0.2.0...v0.2.1) (2020-12-25)
+
+
+### Bug Fixes
+
+* build and bundle ([7e467d4](https://github.com/BlackGlory/extra-dom/commit/7e467d4021e648af87a37cfbb99a0d5288230e3a))
+
 ## [0.2.0](https://github.com/BlackGlory/extra-dom/compare/v0.1.2...v0.2.0) (2020-12-25)
 
 
