@@ -1,4 +1,7 @@
 import typescript from '@rollup/plugin-typescript'
+import commonjs from '@rollup/plugin-commonjs'
+import resolve from '@rollup/plugin-node-resolve'
+import json from '@rollup/plugin-json'
 import { terser } from 'rollup-plugin-terser'
 
 const UMD_NAME = 'ExtraDOM'
@@ -10,6 +13,9 @@ function createOptions({ directory, target }) {
     , output: createOutput('index')
     , plugins: [
         typescript({ target })
+      , json()
+      , resolve()
+      , commonjs()
       ]
     }
   , {
@@ -17,6 +23,9 @@ function createOptions({ directory, target }) {
     , output: createMinification('index')
     , plugins: [
         typescript({ target })
+      , json()
+      , resolve()
+      , commonjs()
       , terser()
       ]
     }
@@ -29,7 +38,6 @@ function createOptions({ directory, target }) {
       , format: 'es'
       , sourcemap: true
       }
-    ,
     , {
         file: `dist/${directory}/${name}.umd.js`
       , format: 'umd'
@@ -38,7 +46,7 @@ function createOptions({ directory, target }) {
       }
     ]
   }
-
+  k
   function createMinification(name) {
     return [
       {
@@ -46,7 +54,6 @@ function createOptions({ directory, target }) {
       , format: 'es'
       , sourcemap: true
       }
-    ,
     , {
         file: `dist/${directory}/${name}.umd.min.js`
       , format: 'umd'

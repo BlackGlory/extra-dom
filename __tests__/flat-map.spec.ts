@@ -51,6 +51,16 @@ describe('flatMap', () => {
       }
     })
 
-    expect(stringifyNode(result[0])).toBe('<p>hello world</p>')
+    expect(stringifyNode(...result)).toBe('<p>hello world</p>')
+  })
+
+  describe('edges', () => {
+    it('can return the same nodes', () => {
+      const root = parseNode('<p>before<em>text</em>after</p>')[0]
+
+      const result = flatMap(root, node => [node])
+
+      expect(stringifyNode(...result)).toBe('<p>before<em>text</em>after</p>')
+    })
   })
 })
