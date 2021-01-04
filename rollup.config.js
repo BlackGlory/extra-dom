@@ -68,7 +68,11 @@ function createOptions({ directory, target }) {
 
 export default [
   ...createOptions({
-    directory: 'es2019'
-  , target: 'ES2019'
+    directory: 'es2015'
+  , target: 'ES2015'
+  })
+, ...createOptions({
+    directory: 'es2018'
+  , target: 'ES2018'
   })
 ]
