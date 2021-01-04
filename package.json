@@ -19,8 +19,6 @@
   ],
   "main": "lib/es2019/index.js",
   "types": "lib/es2019/index.d.ts",
-  "module": "dist/es2019/index.mjs",
-  "browser": "dist/es2019/index.umd.js",
   "repository": "git@github.com:BlackGlory/extra-dom.git",
   "author": "BlackGlory <woshenmedoubuzhidao@blackglory.me>",
   "license": "MIT",
