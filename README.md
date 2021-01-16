@@ -79,3 +79,35 @@ function removeAllChildren(node: Node): void
 ```ts
 function removeAttributes(node: Node, predicate: (name: string) => boolean): void
 ```
+
+### getBySelector
+
+```ts
+function getBySelector(this: void | Element | Document, selectors: string): Element
+```
+
+Return the first matched element.
+
+If cannot find any elements, it throws.
+
+### getAllBySelector
+
+```ts
+function getAllBySelector(this: void | Element | Document, selectors: string): Element[]
+```
+
+Return matched elements.
+
+If cannot find any elements, it throws.
+
+### isDocument
+
+```ts
+function isDocument(val: any): val is Document
+```
+
+### isElement
+
+```ts
+function isElement(val: any): val is Element
+```

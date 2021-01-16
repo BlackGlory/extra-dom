@@ -9,3 +9,9 @@ export * from './normalize'
 
 export * from './remove-all-children'
 export * from './remove-attributes'
+
+export * from './get-by-selector'
+export * from './get-all-by-selector'
+
+export * from './is-document'
+export * from './is-element'
