@@ -285,12 +285,12 @@
     "@types/node" "^14.14.19"
     ajv "^7.0.3"
 
-"@blackglory/types@^0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@blackglory/types/-/types-0.2.6.tgz#0fd273c3430a5fba2313774b6f16005f17f51778"
-  integrity sha512-2gvzqKWMpiPIS2F6G9Au06QyKabtj3tnBmkwNjZ25trvOEdUWfKeJ7g+K8/8EncLzITb2PK3FbMejMlq+iZL/Q==
+"@blackglory/types@^0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@blackglory/types/-/types-0.2.7.tgz#f2c7bf6f71e9608b1df9db56aa853dbbfab4a4ec"
+  integrity sha512-Jjd2uIGePZL8gufsOOvUsOBqg8Gr+GHiB8HLSgaBmVZPV7gANGEZ1YmjrsGUBI4l17F2Jz+vXw7G+TFAtfOxfA==
   dependencies:
-    "@types/node" "^14.14.19"
+    "@types/node" "^14.14.21"
     ajv "^7.0.3"
 
 "@cnakazawa/watch@^1.0.3":
@@ -871,6 +871,11 @@
   version "14.14.19"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.19.tgz#5135176a8330b88ece4e9ab1fdcfc0a545b4bab4"
   integrity sha512-4nhBPStMK04rruRVtVc6cDqhu7S9GZai0fpXgPXrFpcPX6Xul8xnrjSdGB4KPBVYG/R5+fXWdCM8qBoiULWGPQ==
+
+"@types/node@^14.14.21":
+  version "14.14.21"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.21.tgz#d934aacc22424fe9622ebf6857370c052eae464e"
+  integrity sha512-cHYfKsnwllYhjOzuC5q1VpguABBeecUp24yFluHpn/BQaVxB1CuQ1FSRZCzrPxrkIfWISXV2LbeoBthLWg0+0A==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
