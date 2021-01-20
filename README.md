@@ -83,7 +83,7 @@ function removeAttributes(node: Node, predicate: (name: string) => boolean): voi
 ### getBySelector
 
 ```ts
-function getBySelector(this: void | Element | Document, selectors: string): Element
+function getBySelector<T extends Element>(this: void | Element | Document, selectors: string): T
 ```
 
 Return the first matched element.
@@ -93,7 +93,7 @@ If cannot find any elements, it throws.
 ### getAllBySelector
 
 ```ts
-function getAllBySelector(this: void | Element | Document, selectors: string): Element[]
+function getAllBySelector<T extends Element>(this: void | Element | Document, selectors: string): T[]
 ```
 
 Return matched elements.

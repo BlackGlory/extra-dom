@@ -1,7 +1,7 @@
 import { isDocument } from './is-document'
 import { isElement } from './is-element'
 
-export function getAllBySelector(this: void | Element | Document, selectors: string): Element[] {
+export function getAllBySelector<T extends Element>(this: void | Element | Document, selectors: string): T[] {
   const root = (
     isElement(this) || isDocument(this)
   ? this
@@ -9,7 +9,7 @@ export function getAllBySelector(this: void | Element | Document, selectors: str
   )
   const results = root.querySelectorAll(selectors)
   if (results.length) {
-    return Array.from(results)
+    return Array.from(results) as T[]
   } else {
     throw new Error(`Could not find any elements matching ${selectors}`)
   }
