@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.8](https://github.com/BlackGlory/extra-dom/compare/v0.2.7...v0.2.8) (2021-01-20)
+
+
+### Features
+
+* add TypeScript generics ([46dd454](https://github.com/BlackGlory/extra-dom/commit/46dd454bf461ab49b35f263b2dade76164e12a2f))
+
 ### [0.2.7](https://github.com/BlackGlory/extra-dom/compare/v0.2.6...v0.2.7) (2021-01-20)
 
 ### [0.2.6](https://github.com/BlackGlory/extra-dom/compare/v0.2.5...v0.2.6) (2021-01-16)
