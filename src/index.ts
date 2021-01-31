@@ -15,3 +15,6 @@ export * from './get-all-by-selector'
 
 export * from './is-document'
 export * from './is-element'
+
+export * from './node-constants'
+export * from './xpath-result-constants'
