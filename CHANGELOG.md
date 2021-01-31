@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.9](https://github.com/BlackGlory/extra-dom/compare/v0.2.8...v0.2.9) (2021-01-31)
+
+
+### Features
+
+* add constants ([2de9b55](https://github.com/BlackGlory/extra-dom/commit/2de9b551aa2b5465730a250c741e66e6e1b9ce37))
+
 ### [0.2.8](https://github.com/BlackGlory/extra-dom/compare/v0.2.7...v0.2.8) (2021-01-20)
 
 
