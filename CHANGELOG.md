@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.13](https://github.com/BlackGlory/extra-dom/compare/v0.2.12...v0.2.13) (2021-03-05)
+
+
+### Features
+
+* add isntDocument, isntElement ([3b55f82](https://github.com/BlackGlory/extra-dom/commit/3b55f828bbda830d2596a923286a0d06cbd05a43))
+
 ### [0.2.12](https://github.com/BlackGlory/extra-dom/compare/v0.2.11...v0.2.12) (2021-02-25)
 
 ### [0.2.11](https://github.com/BlackGlory/extra-dom/compare/v0.2.10...v0.2.11) (2021-02-04)
