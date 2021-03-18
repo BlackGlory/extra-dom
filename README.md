@@ -131,7 +131,10 @@ enum NodeConstants {
 }
 ```
 
-### XPathResultConstants {
+### XPathResultConstants
+
+```ts
+enum XPathResultConstants {
   ANY_TYPE
 , NUMBER_TYPE
 , STRING_TYPE
@@ -143,3 +146,4 @@ enum NodeConstants {
 , ANY_UNORDERED_NODE_TYPE
 , FIRST_ORDERED_NODE_TYPE
 }
+```
