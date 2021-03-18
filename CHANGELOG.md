@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.16](https://github.com/BlackGlory/extra-dom/compare/v0.2.15...v0.2.16) (2021-03-18)
+
+
+### Features
+
+* add replaceBrWithNewline ([d01dac3](https://github.com/BlackGlory/extra-dom/commit/d01dac3488e9abfa5fc82b4a3ae285d1efe261d0))
+
 ### [0.2.15](https://github.com/BlackGlory/extra-dom/compare/v0.2.14...v0.2.15) (2021-03-18)
 
 ### [0.2.14](https://github.com/BlackGlory/extra-dom/compare/v0.2.13...v0.2.14) (2021-03-17)
