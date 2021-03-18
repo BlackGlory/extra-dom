@@ -112,6 +112,12 @@ function isDocument(val: any): val is Document
 function isElement(val: any): val is Element
 ```
 
+### replaceBrWithNewline
+
+```ts
+function replaceBrWithNewline(node: Node): Node
+```
+
 ### NodeConstants
 
 ```ts

@@ -18,3 +18,5 @@ export * from './is-element'
 
 export * from './node-constants'
 export * from './xpath-result-constants'
+
+export * from './replace-br-with-newline'
