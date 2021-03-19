@@ -3,7 +3,7 @@ import '@blackglory/jest-matchers'
 import { parse } from '@src/parse'
 import { map, toArray } from 'iterable-operator'
 
-describe('traverseDescendantNodes(node: Node): Iterable<Node>', () => {
+describe('traverseDescendantNodes(node: Node): Iterable<ChildNode>', () => {
   it('returns Iterable<Node>', () => {
     const root = parse('<p><em>text</em>text</p>')[0]
 
