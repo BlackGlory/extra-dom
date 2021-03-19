@@ -2271,9 +2271,9 @@ eventemitter3@^4.0.7:
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
-"eventsource@git+https://github.com/EventSource/eventsource.git#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a":
+"eventsource@https://github.com/EventSource/eventsource#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a":
   version "1.0.7"
-  resolved "git+https://github.com/EventSource/eventsource.git#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a"
+  resolved "https://github.com/EventSource/eventsource#46fe04e03e54f4129a28bf75b3a1e5f4ab68b52a"
   dependencies:
     original "^1.0.0"
 
@@ -5096,10 +5096,10 @@ rollup-plugin-terser@^7.0.2:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup@^2.41.5:
-  version "2.41.5"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.41.5.tgz#e79cef8cc5c121612528f590319639b1f32da2d7"
-  integrity sha512-uG+WNNxhOYyeuO7oRt98GA2CNVRgQ67zca75UQVMPzMrLG9FUKzTCgvYVWhtB18TNbV7Uqxo97h+wErAnpFNJw==
+rollup@^2.42.0:
+  version "2.42.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.42.0.tgz#444ce20a45614099decdd786f2a6fcd6c2240b08"
+  integrity sha512-P9bJnaZ2P0hawoJo+Jto8YZZqil9URogNVE4KJeyj6wrUSDIbdMvmj7CsyEFwdXu/I5SiWEzB1hfmLeMldH6ww==
   optionalDependencies:
     fsevents "~2.3.1"
 
