@@ -12,6 +12,7 @@ export * from './remove-attributes'
 
 export * from './get-by-selector'
 export * from './get-all-by-selector'
+export * from './traverse-descendant-nodes'
 
 export * from './is-document'
 export * from './is-element'

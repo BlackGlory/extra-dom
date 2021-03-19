@@ -100,6 +100,12 @@ Return matched elements.
 
 If cannot find any elements, it throws.
 
+### traverseDescendantNodes
+
+```ts
+function* traverseDescendantNodes(node: Node): Iterable<Node>
+```
+
 ### isDocument
 
 ```ts
