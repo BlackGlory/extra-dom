@@ -103,7 +103,7 @@ If cannot find any elements, it throws.
 ### traverseDescendantNodes
 
 ```ts
-function* traverseDescendantNodes(node: Node): Iterable<ChildNode>
+function traverseDescendantNodes(node: Node): Iterable<ChildNode>
 ```
 
 ### isDocument
@@ -122,6 +122,18 @@ function isElement(val: any): val is Element
 
 ```ts
 function replaceBrWithNewline(node: Node): Node
+```
+
+### isBefore
+
+```ts
+function isBefore(subject: Node, object: Node): boolean
+```
+
+### isAfter
+
+```ts
+function isAfter(subject: Node, object: Node): boolean
 ```
 
 ### NodeConstants

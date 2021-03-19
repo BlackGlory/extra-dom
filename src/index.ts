@@ -21,3 +21,6 @@ export * from './node-constants'
 export * from './xpath-result-constants'
 
 export * from './replace-br-with-newline'
+
+export * from './is-before'
+export * from './is-after'
