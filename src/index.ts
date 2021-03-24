@@ -2,6 +2,7 @@ export * from './flat-map'
 export * from './map'
 export * from './filter'
 export * from './unwrap'
+export * from './find'
 
 export * from './parse'
 export * from './stringify'

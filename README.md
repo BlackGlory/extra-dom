@@ -48,6 +48,14 @@ function unwrap(node: Node, predicate: (node: Node) => boolean): Node[]
 
 Traverse the node tree and do `unwrap`.
 
+### find
+
+```ts
+function find(node: Node, predicate: (node: Node) => boolean): Node | null
+```
+
+Traverse the node tree and do `find`.
+
 ### parse
 
 ```ts
