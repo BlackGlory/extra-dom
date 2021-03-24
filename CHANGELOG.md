@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.23](https://github.com/BlackGlory/extra-dom/compare/v0.2.22...v0.2.23) (2021-03-24)
+
+
+### Features
+
+* add findInFollowing/PrecedingSiblingNodes ([47aac89](https://github.com/BlackGlory/extra-dom/commit/47aac89bf6b8d77effd3798b6c0046535fabdb3a))
+
 ### [0.2.22](https://github.com/BlackGlory/extra-dom/compare/v0.2.21...v0.2.22) (2021-03-24)
 
 
