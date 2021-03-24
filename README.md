@@ -114,6 +114,12 @@ If cannot find any elements, it throws.
 function traverseDescendantNodes(node: Node): Iterable<ChildNode>
 ```
 
+### findInDescendantNodes
+
+```ts
+function find(node: Node, predicate: (node: ChildNode) => unknown): ChildNode | null
+```
+
 ### isDocument
 
 ```ts
