@@ -78,6 +78,6 @@
   },
   "dependencies": {
     "@blackglory/types": "^0.4.1",
-    "iterable-operator": "^0.13.5"
+    "iterable-operator": "^0.13.6"
   }
 }

@@ -35,7 +35,7 @@ Traverse the node tree and do `map`.
 ### filter
 
 ```ts
-function filter(node: Node, predicate: (node: Node) => boolean): Node | null
+function filter(node: Node, predicate: (node: Node) => unknown): Node | null
 ```
 
 Traverse the node tree and do `filter`.
@@ -43,7 +43,7 @@ Traverse the node tree and do `filter`.
 ### unwrap
 
 ```ts
-function unwrap(node: Node, predicate: (node: Node) => boolean): Node[]
+function unwrap(node: Node, predicate: (node: Node) => unknown): Node[]
 ```
 
 Traverse the node tree and do `unwrap`.
@@ -51,7 +51,7 @@ Traverse the node tree and do `unwrap`.
 ### find
 
 ```ts
-function find(node: Node, predicate: (node: Node) => boolean): Node | null
+function find(node: Node, predicate: (node: Node) => unknown): Node | null
 ```
 
 Traverse the node tree and do `find`.
@@ -85,7 +85,7 @@ function removeAllChildren(node: Node): void
 ### removeAttributes
 
 ```ts
-function removeAttributes(node: Node, predicate: (name: string) => boolean): void
+function removeAttributes(node: Node, predicate: (name: string) => unknown): void
 ```
 
 ### getBySelector

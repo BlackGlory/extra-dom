@@ -1,7 +1,7 @@
 import { traverseDescendantNodes } from './traverse-descendant-nodes'
 import * as IO from 'iterable-operator'
 
-export function find(node: Node, predicate: (node: Node) => boolean): Node | null {
+export function find(node: Node, predicate: (node: Node) => unknown): Node | null {
   if (predicate(node)) return node
 
   try {
