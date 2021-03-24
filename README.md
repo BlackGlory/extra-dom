@@ -120,6 +120,18 @@ function traverseDescendantNodes(node: Node): Iterable<ChildNode>
 function find(node: Node, predicate: (node: ChildNode) => unknown): ChildNode | null
 ```
 
+### findInPrecedingSiblingNodes
+
+```ts
+function findInPrecedingSiblingNodes(node: Node, predicate: (node: Node) => unknown): Node | null
+```
+
+### findInFollowingSiblingNodes
+
+```ts
+function findInFollowingSiblingNodes(node: Node, predicate: (node: Node) => unknown): Node | null
+```
+
 ### isDocument
 
 ```ts

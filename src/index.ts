@@ -16,6 +16,8 @@ export * from './get-all-by-selector'
 
 export * from './traverse-descendant-nodes'
 export * from './find-in-descendant-nodes'
+export * from './find-in-following-sibling-nodes'
+export * from './find-in-preceding-sibling-nodes'
 
 export * from './is-document'
 export * from './is-element'

@@ -3,47 +3,31 @@ import '@blackglory/jest-matchers'
 import { parse } from '@src/parse'
 
 describe('find(node: Node, predicate: (node: Node) => boolean): Node | null ', () => {
-  describe('work on root', () => {
-    describe('found', () => {
-      it('returns Node', () => {
-        const root = parse('<p><em>text</em>text</p>')[0]
+  describe('found', () => {
+    it('returns the first matched node', () => {
+      const root = parse('<p><em></em><em></em></p>')[0]
 
-        const result = find(root, node => node.nodeName === 'P')
+      const result = find(root, node => node.nodeName === 'EM')
 
-        expect(result).toBe(root)
-      })
+      expect(result).toBe(root.childNodes[0])
     })
 
-    describe('not found', () => {
-      it('returns null', () => {
-        const root = parse('<p><em>text</em>text</p>')[0]
+    it('also works on root', () => {
+      const root = parse('<div><div></div></div>')[0]
 
-        const result = find(root, node => node.nodeName === 'SPAN')
+      const result = find(root, node => node.nodeName === 'DIV')
 
-        expect(result).toBeNull()
-      })
+      expect(result).toBe(root)
     })
   })
 
-  describe('work on descendant nodes', () => {
-    describe('found', () => {
-      it('returns Node', () => {
-        const root = parse('<p><em>text</em>text</p>')[0]
+  describe('not found', () => {
+    it('returns null', () => {
+      const root = parse('<p><em></em></p>')[0]
 
-        const result = find(root, node => node.nodeName === 'EM')
+      const result = find(root, node => node.nodeName === 'SPAN')
 
-        expect(result).toBe(root.childNodes[0])
-      })
-    })
-
-    describe('not found', () => {
-      it('returns null', () => {
-        const root = parse('<p><em>text</em>text</p>')[0]
-
-        const result = find(root, node => node.nodeName === 'SPAN')
-
-        expect(result).toBeNull()
-      })
+      expect(result).toBeNull()
     })
   })
 })
