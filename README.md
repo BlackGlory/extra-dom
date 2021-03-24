@@ -126,11 +126,15 @@ function find(node: Node, predicate: (node: ChildNode) => unknown): ChildNode | 
 function findInPrecedingSiblingNodes(node: Node, predicate: (node: Node) => unknown): Node | null
 ```
 
+This function uses `Node.previousSibling` to traverse the preceding sibling nodes.
+
 ### findInFollowingSiblingNodes
 
 ```ts
 function findInFollowingSiblingNodes(node: Node, predicate: (node: Node) => unknown): Node | null
 ```
+
+This function uses `Node.nextSibling` to traverse the following sibling nodes.
 
 ### isDocument
 
