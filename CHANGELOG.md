@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.22](https://github.com/BlackGlory/extra-dom/compare/v0.2.21...v0.2.22) (2021-03-24)
+
+
+### Features
+
+* add findInDescendantNodes ([4a2a68e](https://github.com/BlackGlory/extra-dom/commit/4a2a68ef24d1b2fa86c6c4d0f04dfe2910eb68a4))
+
 ### [0.2.21](https://github.com/BlackGlory/extra-dom/compare/v0.2.20...v0.2.21) (2021-03-24)
 
 
