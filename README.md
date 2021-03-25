@@ -166,16 +166,34 @@ function previousElementSibling(node: Node, distance: number = 1): Element | nul
 function isDocument(val: any): val is Document
 ```
 
+### isntDocument
+
+```ts
+function isntDocument<T>(val: T): val is Exclude<T, Document>
+```
+
 ### isElement
 
 ```ts
 function isElement(val: any): val is Element
 ```
 
+### isntElement
+
+```ts
+function isntElement<T>(val: T): val is Exclude<T, Element>
+```
+
 ### isTextNode
 
 ```ts
 function isTextNode(node: Node): boolean
+```
+
+### isntTextNode
+
+```ts
+function isntTextNode<T extends Node = Node>(node: Node): node is T
 ```
 
 ### replaceBrWithNewline
