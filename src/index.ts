@@ -26,6 +26,7 @@ export * from './previous-element-sibling'
 
 export * from './is-document'
 export * from './is-element'
+export * from './is-text-node'
 
 export * from './node-constants'
 export * from './xpath-result-constants'

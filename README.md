@@ -172,6 +172,12 @@ function isDocument(val: any): val is Document
 function isElement(val: any): val is Element
 ```
 
+### isTextNode
+
+```ts
+function isTextNode(node: Node): boolean
+```
+
 ### replaceBrWithNewline
 
 ```ts

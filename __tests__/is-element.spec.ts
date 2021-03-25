@@ -11,7 +11,7 @@ describe('isElement', () => {
     })
   })
 
-  describe('val isnt flement', () => {
+  describe('val isnt element', () => {
     it('return false', () => {
       const val = document.createTextNode('')
 
@@ -34,7 +34,7 @@ describe('isElement', () => {
       })
     })
 
-    describe('val isnt flement', () => {
+    describe('val isnt element', () => {
       it('return false', () => {
         const parser = new DOMParser()
         const doc = parser.parseFromString('', 'text/html')
