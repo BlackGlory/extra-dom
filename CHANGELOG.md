@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.25](https://github.com/BlackGlory/extra-dom/compare/v0.2.24...v0.2.25) (2021-03-25)
+
+
+### Features
+
+* add isTextNode ([5375e20](https://github.com/BlackGlory/extra-dom/commit/5375e20f271d60d03245a0657c1c93b5f2aa289f))
+
 ### [0.2.24](https://github.com/BlackGlory/extra-dom/compare/v0.2.23...v0.2.24) (2021-03-25)
 
 
