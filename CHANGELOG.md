@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.24](https://github.com/BlackGlory/extra-dom/compare/v0.2.23...v0.2.24) (2021-03-25)
+
+
+### Features
+
+* add next/previousSibling, next/previousElementSibling ([2fbc691](https://github.com/BlackGlory/extra-dom/commit/2fbc69184cbcc2a0691abb77c7141969be30c8fc))
+
 ### [0.2.23](https://github.com/BlackGlory/extra-dom/compare/v0.2.22...v0.2.23) (2021-03-24)
 
 
