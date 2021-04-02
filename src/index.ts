@@ -30,6 +30,8 @@ export * from './is-element'
 export * from './isnt-element'
 export * from './is-text-node'
 export * from './isnt-text-node'
+export * from './is-parent-node'
+export * from './isnt-parent-node'
 
 export * from './node-constants'
 export * from './xpath-result-constants'

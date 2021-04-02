@@ -196,6 +196,18 @@ function isTextNode(node: Node): boolean
 function isntTextNode<T extends Node = Node>(node: Node): node is T
 ```
 
+### isParentNode
+
+```ts
+function isParentNode<T extends Node = Node>(node: Node): node is T & ParentNode
+```
+
+### isntParentNode
+
+```ts
+function isntParentNode<T extends Node>(node: Node): node is Exclude<T, ParentNode>
+```
+
 ### replaceBrWithNewline
 
 ```ts
