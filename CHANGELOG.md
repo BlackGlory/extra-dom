@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.27](https://github.com/BlackGlory/extra-dom/compare/v0.2.26...v0.2.27) (2021-04-02)
+
+
+### Features
+
+* add isParentNode, isntParentNode ([f9148b0](https://github.com/BlackGlory/extra-dom/commit/f9148b0b371897a145748fc51615b0e140dd2534))
+
 ### [0.2.26](https://github.com/BlackGlory/extra-dom/compare/v0.2.25...v0.2.26) (2021-03-25)
 
 
