@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.28](https://github.com/BlackGlory/extra-dom/compare/v0.2.27...v0.2.28) (2021-04-05)
+
+
+### Bug Fixes
+
+* stringify should clone nodes ([0641571](https://github.com/BlackGlory/extra-dom/commit/0641571f290b786680b62261cad40ae61c38076f))
+
 ### [0.2.27](https://github.com/BlackGlory/extra-dom/compare/v0.2.26...v0.2.27) (2021-04-02)
 
 
