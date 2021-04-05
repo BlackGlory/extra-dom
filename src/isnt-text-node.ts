@@ -1,5 +1,5 @@
 import { isTextNode } from './is-text-node'
 
-export function isntTextNode<T extends Node = Node>(node: Node): node is T {
-  return !isTextNode(node)
+export function isntTextNode<T extends Node = Node>(val: T): val is Exclude<T, Text> {
+  return !isTextNode(val)
 }

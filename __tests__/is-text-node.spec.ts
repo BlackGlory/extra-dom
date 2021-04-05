@@ -1,7 +1,7 @@
 import { isTextNode } from '@src/is-text-node'
 
-describe('isTextNode(node: Node): boolean', () => {
-  describe('node is TextNode', () => {
+describe('isTextNode', () => {
+  describe('node is Text', () => {
     it('returns true', () => {
       const node = document.createTextNode('')
 
@@ -11,7 +11,7 @@ describe('isTextNode(node: Node): boolean', () => {
     })
   })
 
-  describe('node isnt TextNode', () => {
+  describe('node isnt Text', () => {
     it('returns false', () => {
       const node = document.createElement('div')
 
@@ -22,7 +22,7 @@ describe('isTextNode(node: Node): boolean', () => {
   })
 
   describe('element from DOMParser', () => {
-    describe('node is TextNode', () => {
+    describe('node is Text', () => {
       it('returns true', () => {
         const parser = new DOMParser()
         const doc = parser.parseFromString('', 'text/html')
@@ -34,7 +34,7 @@ describe('isTextNode(node: Node): boolean', () => {
       })
     })
 
-    describe('node isnt TextNode', () => {
+    describe('node isnt Text', () => {
       it('returns false', () => {
         const parser = new DOMParser()
         const doc = parser.parseFromString('', 'text/html')

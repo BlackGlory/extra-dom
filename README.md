@@ -187,13 +187,13 @@ function isntElement<T>(val: T): val is Exclude<T, Element>
 ### isTextNode
 
 ```ts
-function isTextNode(node: Node): boolean
+function isTextNode(node: Node): node is Text
 ```
 
 ### isntTextNode
 
 ```ts
-function isntTextNode<T extends Node = Node>(node: Node): node is T
+function isntTextNode<T extends Node = Node>(node: Node): node is Exclude<T, Text>
 ```
 
 ### isParentNode
