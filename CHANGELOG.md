@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.29](https://github.com/BlackGlory/extra-dom/compare/v0.2.28...v0.2.29) (2021-04-05)
+
+
+### Features
+
+* add isNode, isntNode ([48bf7ae](https://github.com/BlackGlory/extra-dom/commit/48bf7ae9c48c46e360f7c3fbce5a50fa6e3f066e))
+* improve isTextNode, isntTextNode ([b32c95b](https://github.com/BlackGlory/extra-dom/commit/b32c95b8e6ccd9556b6a85f062da274fae828fd0))
+
 ### [0.2.28](https://github.com/BlackGlory/extra-dom/compare/v0.2.27...v0.2.28) (2021-04-05)
 
 
