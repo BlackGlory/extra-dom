@@ -20,4 +20,18 @@ describe('isParentNode', () => {
       expect(result).toBe(false)
     })
   })
+
+  describe('node from DOMParser', () => {
+    describe('val is ParentNode', () => {
+      it('return true', () => {
+        const parser = new DOMParser()
+        const doc = parser.parseFromString('', 'text/html')
+        const val = doc.createElement('div')
+
+        const result = isParentNode(val)
+
+        expect(result).toBe(true)
+      })
+    })
+  })
 })

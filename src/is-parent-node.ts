@@ -1,3 +1,5 @@
-export function isParentNode<T extends Node = Node>(node: Node): node is T & ParentNode {
-  return 'children' in node
+import { isNode } from './is-node'
+
+export function isParentNode(val: any): val is Node & ParentNode {
+  return isNode(val) && 'children' in val
 }

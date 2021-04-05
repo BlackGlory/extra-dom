@@ -187,25 +187,37 @@ function isntElement<T>(val: T): val is Exclude<T, Element>
 ### isTextNode
 
 ```ts
-function isTextNode(node: Node): node is Text
+function isTextNode(val: any): val is Text
 ```
 
 ### isntTextNode
 
 ```ts
-function isntTextNode<T extends Node = Node>(node: Node): node is Exclude<T, Text>
+function isntTextNode<T>(val: any): node is Exclude<T, Text>
+```
+
+### isNode
+
+```ts
+function isNode(val: any): val is Node
+```
+
+### isntNode
+
+```ts
+function isntNode<T>(val: T): val is Exclude<T, Node>
 ```
 
 ### isParentNode
 
 ```ts
-function isParentNode<T extends Node = Node>(node: Node): node is T & ParentNode
+function isParentNode(val: any): val is Node & ParentNode
 ```
 
 ### isntParentNode
 
 ```ts
-function isntParentNode<T extends Node>(node: Node): node is Exclude<T, ParentNode>
+function isntParentNode<T>(val: any): val is Exclude<T, Node & ParentNode>
 ```
 
 ### replaceBrWithNewline
