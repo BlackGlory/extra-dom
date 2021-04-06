@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.30](https://github.com/BlackGlory/extra-dom/compare/v0.2.29...v0.2.30) (2021-04-06)
+
+
+### Features
+
+* add assertions ([ee0ced9](https://github.com/BlackGlory/extra-dom/commit/ee0ced9cb1c660038c1c584e5478aac3eded0d2a))
+
 ### [0.2.29](https://github.com/BlackGlory/extra-dom/compare/v0.2.28...v0.2.29) (2021-04-05)
 
 
