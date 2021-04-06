@@ -78,6 +78,7 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
+    "@blackglory/errors": "^1.1.2",
     "@blackglory/types": "^0.4.2",
     "iterable-operator": "^0.13.6"
   }
