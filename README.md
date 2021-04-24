@@ -151,6 +151,12 @@ function findInFollowingSiblingNodes(node: Node, predicate: (node: Node) => unkn
 
 This function uses `Node.nextSibling` to traverse the following sibling nodes.
 
+### parentNode
+
+```ts
+function parentNode(node: Node, distance: number = 1): (Node & ParentNode) | null
+```
+
 ### nextSibling
 
 ```ts

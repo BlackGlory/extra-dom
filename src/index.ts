@@ -23,6 +23,7 @@ export * from './find-in-descendant-nodes'
 export * from './find-in-following-sibling-nodes'
 export * from './find-in-preceding-sibling-nodes'
 
+export * from './parent-node'
 export * from './next-sibling'
 export * from './previous-sibling'
 export * from './next-element-sibling'
