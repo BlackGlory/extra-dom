@@ -1,7 +1,9 @@
 import { isDocument } from './is-document'
 import { isElement } from './is-element'
 
-export function getBySelector<T extends Element>(this: void | Element | Document, selectors: string): T {
+export function getBySelector<T extends Element>(
+  this: void | Element | Document, selectors: string
+): T {
   const root = (
     isElement(this) || isDocument(this)
   ? this

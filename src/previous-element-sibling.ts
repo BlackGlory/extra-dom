@@ -1,7 +1,10 @@
 import { isElement } from './is-element'
 import { assert } from '@blackglory/errors'
 
-export function previousElementSibling(node: Node, distance: number = 1): Element | null {
+export function previousElementSibling(
+  node: Node
+, distance: number = 1
+): Element | null {
   assert(Number.isInteger(distance), 'parameter distance must be an integer')
   assert(distance >= 1, 'parameter distance must be greater than or equal to 1')
 
