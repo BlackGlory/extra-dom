@@ -14,8 +14,12 @@ export * from './remove-attributes'
 export * from './get-by-selector'
 export * from './get-all-by-selector'
 
+export * from './traverse-ancestor-nodes'
+export * from './find-in-ancestor-nodes'
+
 export * from './traverse-descendant-nodes'
 export * from './find-in-descendant-nodes'
+
 export * from './find-in-following-sibling-nodes'
 export * from './find-in-preceding-sibling-nodes'
 

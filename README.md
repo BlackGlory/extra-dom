@@ -108,10 +108,25 @@ Return matched elements.
 
 If cannot find any elements, it throws.
 
+### traverseAncestorNodes
+
+```ts
+function traverseAncestorNodes(node: Node): Iterable<Node & ParentNode>
+```
+
 ### traverseDescendantNodes
 
 ```ts
 function traverseDescendantNodes(node: Node): Iterable<ChildNode>
+```
+
+### findInAncestorNodes
+
+```ts
+function findInAncestorNodes(
+  node: Node
+, predicate: (node: Node & ParentNode) => unknown
+): (Node & ParentNode) | null
 ```
 
 ### findInDescendantNodes
