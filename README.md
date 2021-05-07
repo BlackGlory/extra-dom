@@ -259,10 +259,10 @@ function isBefore(subject: Node, object: Node): boolean
 function isAfter(subject: Node, object: Node): boolean
 ```
 
-### NodeConstants
+### NodeType
 
 ```ts
-enum NodeConstants {
+enum NodeType {
   ELEMENT_NODE
 , ATTRIBUTE_NODE
 , TEXT_NODE
@@ -278,10 +278,10 @@ enum NodeConstants {
 }
 ```
 
-### XPathResultConstants
+### XPathResultType
 
 ```ts
-enum XPathResultConstants {
+enum XPathResultType {
   ANY_TYPE
 , NUMBER_TYPE
 , STRING_TYPE

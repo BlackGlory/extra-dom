@@ -40,8 +40,8 @@ export * from './isnt-text-node'
 export * from './is-parent-node'
 export * from './isnt-parent-node'
 
-export * from './node-constants'
-export * from './xpath-result-constants'
+export * from './node-type'
+export * from './xpath-result-type'
 
 export * from './replace-br-with-newline'
 
