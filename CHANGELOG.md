@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/BlackGlory/extra-dom/compare/v0.2.32...v0.3.0) (2021-05-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* - NodeConstants => NodeType
+- XPathResultConstants => XpathResultType
+
+### Features
+
+* rename NodeConstants, XPathResultConstants ([720f626](https://github.com/BlackGlory/extra-dom/commit/720f626c96f257e0b922798495b5739898127bde))
+
 ### [0.2.32](https://github.com/BlackGlory/extra-dom/compare/v0.2.31...v0.2.32) (2021-04-24)
 
 
