@@ -35,7 +35,7 @@ Traverse the node tree and do `map`.
 ### filter
 
 ```ts
-function filter(node: Node, predicate: (node: Node) => unknown): Node | null
+function filter(node: Node, predicate: (node: Node) => unknown): Node | undefined
 ```
 
 Traverse the node tree and do `filter`.
@@ -51,7 +51,7 @@ Traverse the node tree and do `unwrap`.
 ### find
 
 ```ts
-function find(node: Node, predicate: (node: Node) => unknown): Node | null
+function find(node: Node, predicate: (node: Node) => unknown): Node | undefined
 ```
 
 Traverse the node tree and do `find`.
@@ -91,7 +91,10 @@ function removeAttributes(node: Node, predicate: (name: string) => unknown): voi
 ### getBySelector
 
 ```ts
-function getBySelector<T extends Element>(this: void | Element | Document, selectors: string): T
+function getBySelector<T extends Element>(
+  this: void | Element | Document
+, selectors: string
+): T
 ```
 
 Return the first matched element.
@@ -101,7 +104,10 @@ If cannot find any elements, it throws.
 ### getAllBySelector
 
 ```ts
-function getAllBySelector<T extends Element>(this: void | Element | Document, selectors: string): T[]
+function getAllBySelector<T extends Element>(
+  this: void | Element | Document
+, selectors: string
+): T[]
 ```
 
 Return matched elements.
@@ -126,19 +132,22 @@ function traverseDescendantNodes(node: Node): Iterable<ChildNode>
 function findInAncestorNodes(
   node: Node
 , predicate: (node: Node & ParentNode) => unknown
-): (Node & ParentNode) | null
+): (Node & ParentNode) | undefined
 ```
 
 ### findInDescendantNodes
 
 ```ts
-function find(node: Node, predicate: (node: ChildNode) => unknown): ChildNode | null
+function find(node: Node, predicate: (node: ChildNode) => unknown): ChildNode | undefined
 ```
 
 ### findInPrecedingSiblingNodes
 
 ```ts
-function findInPrecedingSiblingNodes(node: Node, predicate: (node: Node) => unknown): Node | null
+function findInPrecedingSiblingNodes(
+  node: Node
+, predicate: (node: Node) => unknown
+): Node | undefined
 ```
 
 This function uses `Node.previousSibling` to traverse the preceding sibling nodes.
@@ -146,7 +155,10 @@ This function uses `Node.previousSibling` to traverse the preceding sibling node
 ### findInFollowingSiblingNodes
 
 ```ts
-function findInFollowingSiblingNodes(node: Node, predicate: (node: Node) => unknown): Node | null
+function findInFollowingSiblingNodes(
+  node: Node
+, predicate: (node: Node) => unknown
+): Node | undefined
 ```
 
 This function uses `Node.nextSibling` to traverse the following sibling nodes.
@@ -154,31 +166,31 @@ This function uses `Node.nextSibling` to traverse the following sibling nodes.
 ### parentNode
 
 ```ts
-function parentNode(node: Node, distance: number = 1): (Node & ParentNode) | null
+function parentNode(node: Node, distance: number = 1): (Node & ParentNode) | undefined
 ```
 
 ### nextSibling
 
 ```ts
-function nextSibling(node: Node, distance: number = 1): ChildNode | null
+function nextSibling(node: Node, distance: number = 1): ChildNode | undefined
 ```
 
 ### previousSibling
 
 ```ts
-function previousSibling(node: Node, distance: number = 1): ChildNode | null
+function previousSibling(node: Node, distance: number = 1): ChildNode | undefined
 ```
 
 ### nextElementSibling
 
 ```ts
-function nextElementSibling(node: Node, distance: number = 1): Element | null
+function nextElementSibling(node: Node, distance: number = 1): Element | undefined
 ```
 
 ### previousElementSibling
 
 ```ts
-function previousElementSibling(node: Node, distance: number = 1): Element | null
+function previousElementSibling(node: Node, distance: number = 1): Element | undefined
 ```
 
 ### isDocument

@@ -1,10 +1,10 @@
 export function findInPrecedingSiblingNodes(
   node: Node
 , predicate: (node: Node) => unknown
-): Node | null {
+): Node | undefined {
   const previousNode = node.previousSibling
 
-  if (!previousNode) return null
+  if (!previousNode) return undefined
 
   if (predicate(previousNode)) {
     return previousNode

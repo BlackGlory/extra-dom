@@ -1,10 +1,10 @@
 export function findInFollowingSiblingNodes(
   node: Node
 , predicate: (node: Node) => unknown
-): Node | null {
+): Node | undefined {
   const nextNode = node.nextSibling
 
-  if (!nextNode) return null
+  if (!nextNode) return undefined
 
   if (predicate(nextNode)) {
     return nextNode

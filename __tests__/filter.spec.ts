@@ -47,12 +47,12 @@ describe('filter', () => {
   })
 
   describe('reject root', () => {
-    it('return null', () => {
+    it('return undefined', () => {
       const root = parse('<p><em></em></p>')[0]
 
       const result = filter(root, node => node.nodeName !== 'P')
 
-      expect(result).toBeNull()
+      expect(result).toBeUndefined()
     })
   })
 })

@@ -4,6 +4,6 @@ import { find } from 'iterable-operator'
 export function findInDescendantNodes(
   node: Node
 , predicate: (node: ChildNode) => unknown
-): ChildNode | null {
-  return find(traverseDescendantNodes(node), node => predicate(node)) ?? null
+): ChildNode | undefined {
+  return find(traverseDescendantNodes(node), node => predicate(node))
 }

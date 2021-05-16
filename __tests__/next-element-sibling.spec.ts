@@ -1,7 +1,7 @@
 import { nextElementSibling } from '@src/next-element-sibling'
 import { parse } from '@src/parse'
 
-describe('nextElementSibling(node: Node, distance: number): Element | null', () => {
+describe('nextElementSibling(node: Node, distance: number): Element | undefined', () => {
   describe('found', () => {
     it('returns the element by distance', () => {
       const nodes = parse('<p></p>text<p></p>text<p></p>')
@@ -13,12 +13,12 @@ describe('nextElementSibling(node: Node, distance: number): Element | null', () 
   })
 
   describe('not found', () => {
-    it('returns null', () => {
+    it('returns undefined', () => {
       const nodes = parse('<p></p>text')
 
       const result = nextElementSibling(nodes[0], 1)
 
-      expect(result).toBeNull()
+      expect(result).toBeUndefined()
     })
   })
 })

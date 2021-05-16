@@ -6,7 +6,7 @@ describe(`
   findInAncestorNodes(
     node: Node
   , predicate: (node: Node & ParentNode) => unknown
-  ): (Node & ParentNode) | null
+  ): (Node & ParentNode) | undefined
 `, () => {
   describe('found', () => {
     it('returns the first matched node', () => {
@@ -20,13 +20,13 @@ describe(`
   })
 
   describe('not found', () => {
-    it('returns null', () => {
+    it('returns undefined', () => {
       const root = parse('<article><span></span><article>')[0]
       const node = (root as Element).querySelector('span')!
 
       const result = findInAncestorNodes(node, node => node.nodeName === 'SPAN')
 
-      expect(result).toBeNull()
+      expect(result).toBeUndefined()
     })
   })
 })

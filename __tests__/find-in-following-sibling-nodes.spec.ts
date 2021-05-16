@@ -1,7 +1,7 @@
 import { findInFollowingSiblingNodes } from '@src/find-in-following-sibling-nodes'
 import { parse } from '@src/parse'
 
-describe('findInFollowingSiblingNodes(node: Node, predicate: (node: Node) => unknown): Node | null', () => {
+describe('findInFollowingSiblingNodes(node: Node, predicate: (node: Node) => unknown): Node | undefined', () => {
   describe('found', () => {
     it('return the first matched node', () => {
       const nodes = parse('<p></p><p></p><p></p>')
@@ -13,12 +13,12 @@ describe('findInFollowingSiblingNodes(node: Node, predicate: (node: Node) => unk
   })
 
   describe('not found', () => {
-    it('return null', () => {
+    it('return undefined', () => {
       const nodes = parse('<p></p><p></p>')
 
       const result = findInFollowingSiblingNodes(nodes[0], node => node.nodeName === 'SPAN')
 
-      expect(result).toBeNull()
+      expect(result).toBeUndefined()
     })
   })
 })

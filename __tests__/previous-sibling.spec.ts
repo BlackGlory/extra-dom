@@ -1,7 +1,7 @@
 import { previousSibling } from '@src/previous-sibling'
 import { parse } from '@src/parse'
 
-describe('previousSibling(node: Node, distance: number): ChildNode | null', () => {
+describe('previousSibling(node: Node, distance: number): ChildNode | undefined', () => {
   describe('found', () => {
     it('returns the node by distance', () => {
       const nodes = parse('<p></p><p></p><p></p>')
@@ -13,12 +13,12 @@ describe('previousSibling(node: Node, distance: number): ChildNode | null', () =
   })
 
   describe('not found', () => {
-    it('returns null', () => {
+    it('returns undefined', () => {
       const nodes = parse('<p></p>')
 
       const result = previousSibling(nodes[0], 1)
 
-      expect(result).toBeNull()
+      expect(result).toBeUndefined()
     })
   })
 })

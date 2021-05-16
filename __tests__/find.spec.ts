@@ -2,7 +2,7 @@ import { find } from '@src/find'
 import '@blackglory/jest-matchers'
 import { parse } from '@src/parse'
 
-describe('find(node: Node, predicate: (node: Node) => boolean): Node | null ', () => {
+describe('find(node: Node, predicate: (node: Node) => boolean): Node | undefined ', () => {
   describe('found', () => {
     it('returns the first matched node', () => {
       const root = parse('<p><em></em><em></em></p>')[0]
@@ -22,12 +22,12 @@ describe('find(node: Node, predicate: (node: Node) => boolean): Node | null ', (
   })
 
   describe('not found', () => {
-    it('returns null', () => {
+    it('returns undefined', () => {
       const root = parse('<p><em></em></p>')[0]
 
       const result = find(root, node => node.nodeName === 'SPAN')
 
-      expect(result).toBeNull()
+      expect(result).toBeUndefined()
     })
   })
 })
