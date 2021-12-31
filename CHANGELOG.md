@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/BlackGlory/extra-dom/compare/v0.4.5...v0.5.0) (2021-12-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove replaceBrWithNewline
+
+### Features
+
+* remove replaceBrWithNewline ([25fb309](https://github.com/BlackGlory/extra-dom/commit/25fb30982037f37c5a2a98c26a64a8d067003b5c))
+
 ### [0.4.5](https://github.com/BlackGlory/extra-dom/compare/v0.4.4...v0.4.5) (2021-12-16)
 
 ### [0.4.4](https://github.com/BlackGlory/extra-dom/compare/v0.4.3...v0.4.4) (2021-12-12)
