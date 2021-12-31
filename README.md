@@ -253,12 +253,6 @@ function isParentNode(val: any): val is Node & ParentNode
 function isntParentNode<T>(val: any): val is Exclude<T, Node & ParentNode>
 ```
 
-### replaceBrWithNewline
-
-```ts
-function replaceBrWithNewline(node: Node): Node
-```
-
 ### isBefore
 
 ```ts

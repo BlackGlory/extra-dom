@@ -43,7 +43,5 @@ export * from './isnt-parent-node'
 export * from './node-type'
 export * from './xpath-result-type'
 
-export * from './replace-br-with-newline'
-
 export * from './is-before'
 export * from './is-after'
