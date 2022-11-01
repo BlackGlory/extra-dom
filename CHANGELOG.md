@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.3](https://github.com/BlackGlory/extra-dom/compare/v0.5.2...v0.5.3) (2022-11-01)
+
+
+### Features
+
+* add `createDOMParser` ([c00cdc6](https://github.com/BlackGlory/extra-dom/commit/c00cdc6ff70c6a873f88d730742be5618ef04516))
+
 ### [0.5.2](https://github.com/BlackGlory/extra-dom/compare/v0.5.1...v0.5.2) (2022-10-31)
 
 ### [0.5.1](https://github.com/BlackGlory/extra-dom/compare/v0.5.0...v0.5.1) (2022-08-01)
