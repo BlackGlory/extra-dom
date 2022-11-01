@@ -227,6 +227,11 @@ function isBefore(subject: Node, object: Node): boolean
 function isAfter(subject: Node, object: Node): boolean
 ```
 
+### createDOMParser
+```ts
+function createDOMParser(): DOMParser
+```
+
 ### NodeType
 ```ts
 enum NodeType {

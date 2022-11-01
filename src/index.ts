@@ -45,3 +45,5 @@ export * from './xpath-result-type'
 
 export * from './is-before'
 export * from './is-after'
+
+export * from './create-dom-parser'
