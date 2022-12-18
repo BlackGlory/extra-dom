@@ -1,5 +1,4 @@
 import { findInAncestorNodes } from '@src/find-in-ancestor-nodes'
-import '@blackglory/jest-matchers'
 import { parse } from '@src/parse'
 
 describe(`

@@ -1,5 +1,4 @@
 import { find } from '@src/find'
-import '@blackglory/jest-matchers'
 import { parse } from '@src/parse'
 
 describe('find(node: Node, predicate: (node: Node) => boolean): Node | undefined ', () => {

@@ -1,5 +1,4 @@
 import { traverseDescendantNodes } from '@src/traverse-descendant-nodes'
-import '@blackglory/jest-matchers'
 import { parse } from '@src/parse'
 import { map, toArray } from 'iterable-operator'
 
@@ -7,10 +6,9 @@ describe('traverseDescendantNodes(node: Node): Iterable<ChildNode>', () => {
   it('returns Iterable<Node>', () => {
     const root = parse('<p><em>text</em>text</p>')[0]
 
-    const result = traverseDescendantNodes(root)
-    const nodeNames = toArray(map(result, x => x.nodeName))
+    const iter = traverseDescendantNodes(root)
+    const nodeNames = toArray(map(iter, x => x.nodeName))
 
-    expect(result).toBeIterable()
     expect(nodeNames).toEqual(['EM', '#text', '#text'])
   })
 })

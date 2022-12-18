@@ -1,5 +1,4 @@
 import { findInDescendantNodes } from '@src/find-in-descendant-nodes'
-import '@blackglory/jest-matchers'
 import { parse } from '@src/parse'
 
 describe('findInDescendantNodes(node: Node, predicate: (node: ChildNode) => unknown): ChildNode | undefined', () => {
