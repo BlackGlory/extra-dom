@@ -8,4 +8,5 @@ module.exports = {
 , moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/'
   })
+, setupFilesAfterEnv: ['./__tests__/polyfill.ts']
 }

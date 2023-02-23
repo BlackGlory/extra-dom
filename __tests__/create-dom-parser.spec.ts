@@ -1,4 +1,3 @@
-import './polyfill'
 import { createDOMParser } from '@src/create-dom-parser'
 
 test('createDOMParser', () => {

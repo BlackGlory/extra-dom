@@ -1,5 +1,12 @@
+import { isElement } from './is-element'
+import { isTextNode } from './is-text-node'
+
 export function stringify(nodes: Node[]): string {
-  const div = document.createElement('div')
-  nodes.forEach(x => div.append(x.cloneNode(true)))
-  return div.innerHTML
+  return nodes
+    .map(node => {
+      if (isElement(node)) return node.outerHTML
+      if (isTextNode(node)) return node.textContent
+      return ''
+    })
+    .join('')
 }
