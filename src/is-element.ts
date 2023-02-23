@@ -1,4 +1,4 @@
-import { NodeType } from './node-type'
+import { NodeType } from './node-type.js'
 import { isObject } from '@blackglory/types'
 
 export function isElement(val: any): val is Element {

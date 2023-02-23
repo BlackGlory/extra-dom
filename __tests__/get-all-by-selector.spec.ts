@@ -1,4 +1,4 @@
-import { getAllBySelector } from '@src/get-all-by-selector'
+import { getAllBySelector } from '@src/get-all-by-selector.js'
 import { getError } from 'return-style'
 
 beforeEach(() => {

@@ -1,4 +1,4 @@
-import { isParentNode } from '@src/is-parent-node'
+import { isParentNode } from '@src/is-parent-node.js'
 
 describe('isParentNode', () => {
   describe('val is ParentNode', () => {

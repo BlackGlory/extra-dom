@@ -1,4 +1,4 @@
-import { clone } from '@src/utils'
+import { clone } from '@src/utils.js'
 
 export function map(node: Node, fn: (node: Node) => Node): Node {
   const newNode = clone(fn(clone(node)))

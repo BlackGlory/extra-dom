@@ -1,6 +1,6 @@
-import { flatMap } from '@src/flat-map'
-import { parse } from '@src/parse'
-import { stringify } from '@src/stringify'
+import { flatMap } from '@src/flat-map.js'
+import { parse } from '@src/parse.js'
+import { stringify } from '@src/stringify.js'
 
 describe('flatMap', () => {
   it('is preorder', () => {

@@ -1,4 +1,4 @@
-import { isElement } from '@src/is-element'
+import { isElement } from '@src/is-element.js'
 
 describe('isElement', () => {
   describe('val is element', () => {

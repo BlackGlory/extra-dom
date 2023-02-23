@@ -1,5 +1,5 @@
-import { parentNode } from '@src/parent-node'
-import { parse } from '@src/parse'
+import { parentNode } from '@src/parent-node.js'
+import { parse } from '@src/parse.js'
 
 describe('parentNode(node: Node, distance: number): (Node & ParentNode) | undefined', () => {
   describe('found', () => {

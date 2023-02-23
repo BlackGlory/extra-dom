@@ -1,4 +1,4 @@
-import { parse } from '@src/parse'
+import { parse } from '@src/parse.js'
 
 describe('parse(html: string): Node[]', () => {
   it('return Node[]', () => {

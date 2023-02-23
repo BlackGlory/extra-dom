@@ -1,5 +1,5 @@
-import { findInFollowingSiblingNodes } from '@src/find-in-following-sibling-nodes'
-import { parse } from '@src/parse'
+import { findInFollowingSiblingNodes } from '@src/find-in-following-sibling-nodes.js'
+import { parse } from '@src/parse.js'
 
 describe('findInFollowingSiblingNodes(node: Node, predicate: (node: Node) => unknown): Node | undefined', () => {
   describe('found', () => {

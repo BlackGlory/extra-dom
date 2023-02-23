@@ -1,6 +1,6 @@
-import { filter } from '@src/filter'
-import { parse } from '@src/parse'
-import { stringify } from '@src/stringify'
+import { filter } from '@src/filter.js'
+import { parse } from '@src/parse.js'
+import { stringify } from '@src/stringify.js'
 
 describe('filter', () => {
   it('is preorder', () => {

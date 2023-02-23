@@ -1,5 +1,5 @@
-import { isDocument } from './is-document'
-import { isElement } from './is-element'
+import { isDocument } from './is-document.js'
+import { isElement } from './is-element.js'
 
 export function getAllBySelector<T extends Element>(
   this: void | Element | Document

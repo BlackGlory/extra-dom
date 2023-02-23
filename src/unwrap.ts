@@ -1,4 +1,4 @@
-import { flatMap } from './flat-map'
+import { flatMap } from './flat-map.js'
 import { map, flatten, toArray } from 'iterable-operator'
 
 export function unwrap(node: Node, predicate: (node: Node) => unknown): Node[] {

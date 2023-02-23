@@ -1,5 +1,5 @@
-import { nextSibling } from '@src/next-sibling'
-import { parse } from '@src/parse'
+import { nextSibling } from '@src/next-sibling.js'
+import { parse } from '@src/parse.js'
 
 describe('nextSibling(node: Node, distance: number): ChildNode | undefined', () => {
   describe('found', () => {

@@ -1,5 +1,5 @@
-import { findInPrecedingSiblingNodes } from '@src/find-in-preceding-sibling-nodes'
-import { parse } from '@src/parse'
+import { findInPrecedingSiblingNodes } from '@src/find-in-preceding-sibling-nodes.js'
+import { parse } from '@src/parse.js'
 
 describe('findInPrecedingSiblingNodes(node: Node, predicate: (node: Node) => unknown): Node | undefined', () => {
   describe('found', () => {

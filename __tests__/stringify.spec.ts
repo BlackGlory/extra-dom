@@ -1,5 +1,5 @@
-import { stringify } from '@src/stringify'
-import { createDOMParser } from '@src/create-dom-parser'
+import { stringify } from '@src/stringify.js'
+import { createDOMParser } from '@src/create-dom-parser.js'
 
 describe('stringify', () => {
   test('nodes in current document', () => {

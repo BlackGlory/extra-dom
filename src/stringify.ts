@@ -1,5 +1,5 @@
-import { isElement } from './is-element'
-import { isTextNode } from './is-text-node'
+import { isElement } from './is-element.js'
+import { isTextNode } from './is-text-node.js'
 
 export function stringify(nodes: Node[]): string {
   return nodes

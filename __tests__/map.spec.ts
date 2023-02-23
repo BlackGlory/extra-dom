@@ -1,6 +1,6 @@
-import { map } from '@src/map'
-import { parse } from '@src/parse'
-import { stringify } from '@src/stringify'
+import { map } from '@src/map.js'
+import { parse } from '@src/parse.js'
+import { stringify } from '@src/stringify.js'
 
 describe('map', () => {
   it('is preorder', () => {

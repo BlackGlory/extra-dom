@@ -1,4 +1,4 @@
-import { createDOMParser } from '@src/create-dom-parser'
+import { createDOMParser } from '@src/create-dom-parser.js'
 
 test('createDOMParser', () => {
   const parser = createDOMParser()

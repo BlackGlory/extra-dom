@@ -1,5 +1,5 @@
-import { isBefore } from '@src/is-before'
-import { parse } from '@src/parse'
+import { isBefore } from '@src/is-before.js'
+import { parse } from '@src/parse.js'
 
 describe('isBefore(subject: Node, object: Node): boolean', () => {
   it('returns boolean', () => {

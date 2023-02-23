@@ -1,5 +1,5 @@
-import { previousSibling } from '@src/previous-sibling'
-import { parse } from '@src/parse'
+import { previousSibling } from '@src/previous-sibling.js'
+import { parse } from '@src/parse.js'
 
 describe('previousSibling(node: Node, distance: number): ChildNode | undefined', () => {
   describe('found', () => {

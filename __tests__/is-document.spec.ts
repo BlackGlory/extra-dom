@@ -1,4 +1,4 @@
-import { isDocument } from '@src/is-document'
+import { isDocument } from '@src/is-document.js'
 
 describe('isDocument', () => {
   describe('val is element', () => {

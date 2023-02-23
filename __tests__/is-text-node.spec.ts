@@ -1,4 +1,4 @@
-import { isTextNode } from '@src/is-text-node'
+import { isTextNode } from '@src/is-text-node.js'
 
 describe('isTextNode', () => {
   describe('node is Text', () => {

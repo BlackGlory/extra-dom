@@ -1,4 +1,4 @@
-import { isElement } from './is-element'
+import { isElement } from './is-element.js'
 import { assert } from '@blackglory/errors'
 
 export function nextElementSibling(node: Node, distance: number = 1): Element | undefined {

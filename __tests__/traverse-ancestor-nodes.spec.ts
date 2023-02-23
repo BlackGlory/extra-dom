@@ -1,5 +1,5 @@
-import { traverseAncestorNodes } from '@src/traverse-ancestor-nodes'
-import { parse } from '@src/parse'
+import { traverseAncestorNodes } from '@src/traverse-ancestor-nodes.js'
+import { parse } from '@src/parse.js'
 import { map, toArray } from 'iterable-operator'
 
 describe('traverseAncestorNodes(node: Node): Iterable<Node & ParentNode>', () => {

@@ -1,5 +1,5 @@
-import { nextElementSibling } from '@src/next-element-sibling'
-import { parse } from '@src/parse'
+import { nextElementSibling } from '@src/next-element-sibling.js'
+import { parse } from '@src/parse.js'
 
 describe('nextElementSibling(node: Node, distance: number): Element | undefined', () => {
   describe('found', () => {

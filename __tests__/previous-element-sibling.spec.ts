@@ -1,5 +1,5 @@
-import { previousElementSibling } from '@src/previous-element-sibling'
-import { parse } from '@src/parse'
+import { previousElementSibling } from '@src/previous-element-sibling.js'
+import { parse } from '@src/parse.js'
 
 describe('previousElementSibling(node: Node, distance: number): Element | undefined', () => {
   describe('found', () => {

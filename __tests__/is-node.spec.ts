@@ -1,4 +1,4 @@
-import { isNode } from '@src/is-node'
+import { isNode } from '@src/is-node.js'
 
 describe('isNode', () => {
   describe('val is node', () => {

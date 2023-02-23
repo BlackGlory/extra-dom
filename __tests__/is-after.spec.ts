@@ -1,5 +1,5 @@
-import { isAfter } from '@src/is-after'
-import { parse } from '@src/parse'
+import { isAfter } from '@src/is-after.js'
+import { parse } from '@src/parse.js'
 
 describe('isAfter(subject: Node, object: Node): boolean', () => {
   it('returns boolean', () => {

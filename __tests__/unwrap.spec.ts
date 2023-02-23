@@ -1,6 +1,6 @@
-import { unwrap } from '@src/unwrap'
-import { parse } from '@src/parse'
-import { stringify } from '@src/stringify'
+import { unwrap } from '@src/unwrap.js'
+import { parse } from '@src/parse.js'
+import { stringify } from '@src/stringify.js'
 
 describe('unwrap', () => {
   it('is preorder', () => {

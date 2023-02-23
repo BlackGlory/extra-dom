@@ -1,5 +1,5 @@
-import { find } from '@src/find'
-import { parse } from '@src/parse'
+import { find } from '@src/find.js'
+import { parse } from '@src/parse.js'
 
 describe('find(node: Node, predicate: (node: Node) => boolean): Node | undefined ', () => {
   describe('found', () => {

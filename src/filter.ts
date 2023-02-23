@@ -1,4 +1,4 @@
-import { flatMap } from './flat-map'
+import { flatMap } from './flat-map.js'
 
 export function filter(node: Node, predicate: (node: Node) => unknown): Node | undefined {
   const results = flatMap(node, node => {

@@ -1,5 +1,5 @@
-import { clone, cloneNodes, copyNodesToChildNodes } from '@src/utils'
-import { removeAllChildren } from '@src/remove-all-children'
+import { clone, cloneNodes, copyNodesToChildNodes } from '@src/utils.js'
+import { removeAllChildren } from '@src/remove-all-children.js'
 
 export function flatMap(node: Node, fn: (node: Node) => Node[]): Node[] {
   const newNodes = cloneNodes(fn(clone(node)))

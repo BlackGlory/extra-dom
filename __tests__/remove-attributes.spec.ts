@@ -1,6 +1,6 @@
-import { removeAttributes } from '@src/remove-attributes'
-import { parse } from '@src/parse'
-import { stringify } from '@src/stringify'
+import { removeAttributes } from '@src/remove-attributes.js'
+import { parse } from '@src/parse.js'
+import { stringify } from '@src/stringify.js'
 
 describe('removeAttributes', () => {
   it('remove attributes', () => {

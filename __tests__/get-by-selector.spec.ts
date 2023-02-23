@@ -1,4 +1,4 @@
-import { getBySelector } from '@src/get-by-selector'
+import { getBySelector } from '@src/get-by-selector.js'
 import { getError } from 'return-style'
 
 beforeEach(() => {

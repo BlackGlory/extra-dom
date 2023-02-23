@@ -1,5 +1,5 @@
-import { findInAncestorNodes } from '@src/find-in-ancestor-nodes'
-import { parse } from '@src/parse'
+import { findInAncestorNodes } from '@src/find-in-ancestor-nodes.js'
+import { parse } from '@src/parse.js'
 
 describe(`
   findInAncestorNodes(

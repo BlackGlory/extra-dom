@@ -1,5 +1,5 @@
-import { removeAllChildren } from '@src/remove-all-children'
-import { parse } from '@src/parse'
+import { removeAllChildren } from '@src/remove-all-children.js'
+import { parse } from '@src/parse.js'
 
 describe('removeAllChildren', () => {
   it('empty childNodes', () => {

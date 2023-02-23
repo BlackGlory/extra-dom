@@ -1,5 +1,5 @@
-import { findInDescendantNodes } from '@src/find-in-descendant-nodes'
-import { parse } from '@src/parse'
+import { findInDescendantNodes } from '@src/find-in-descendant-nodes.js'
+import { parse } from '@src/parse.js'
 
 describe('findInDescendantNodes(node: Node, predicate: (node: ChildNode) => unknown): ChildNode | undefined', () => {
   describe('found', () => {

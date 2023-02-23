@@ -1,4 +1,4 @@
-import { traverseDescendantNodes } from './traverse-descendant-nodes'
+import { traverseDescendantNodes } from './traverse-descendant-nodes.js'
 import { find } from 'iterable-operator'
 
 export function findInDescendantNodes(
