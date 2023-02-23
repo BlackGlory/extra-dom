@@ -1,13 +1,15 @@
 import { flatMap } from './flat-map.js'
-import { map, flatten, toArray } from 'iterable-operator'
+import * as Iter from 'iterable-operator'
+import { pipe } from 'extra-utils'
 
 export function unwrap(node: Node, predicate: (node: Node) => unknown): Node[] {
   return flatMap(node, node => {
     if (predicate(node)) {
-      // Array
-      //   .from(node.childNodes)
-      //   .flatMap(node => unwrap(node, predicate)
-      return toArray(flatten(map(node.childNodes, node => unwrap(node, predicate))))
+      return pipe(
+        node.childNodes
+      , nodes => Iter.flatMap(nodes, node => unwrap(node, predicate))
+      , Iter.toArray
+      )
     } else {
       return [node]
     }
