@@ -16,7 +16,7 @@
   ],
   "files": [
     "lib",
-    "dist"
+    "src"
   ],
   "type": "module",
   "main": "lib/index.js",
