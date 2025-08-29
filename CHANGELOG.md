@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.2](https://github.com/BlackGlory/extra-dom/compare/v0.6.1...v0.6.2) (2025-08-29)
+
+
+### Features
+
+* **is-after, is-before:** make them work in a DOM-less environment ([37d0948](https://github.com/BlackGlory/extra-dom/commit/37d09483f918724c54d714b4b065d4487e1b60ab))
+
 ### [0.6.1](https://github.com/BlackGlory/extra-dom/compare/v0.6.0...v0.6.1) (2023-06-10)
 
 
