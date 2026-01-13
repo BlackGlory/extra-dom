@@ -1,7 +1,6 @@
 import { toArray } from 'iterable-operator'
+import { parseFragment } from './parse-fragment.js'
 
 export function parseNodes(html: string): Node[] {
-  const template = document.createElement('template')
-  template.innerHTML = html
-  return toArray(template.content.childNodes)
+  return toArray(parseFragment(html).childNodes)
 }

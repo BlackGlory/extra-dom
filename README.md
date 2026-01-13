@@ -58,6 +58,16 @@ function parseNodes(html: string): Node[]
 function stringifyNodes(nodes: Node[]): string
 ```
 
+### parseFragment
+```ts
+function parseFragment(html: string): DocumentFragment 
+```
+
+### stringifyFragment
+```ts
+function stringifyFragment(fragment: DocumentFragment): string 
+```
+
 ### removeAllChildren
 ```ts
 function removeAllChildren(node: Node): void

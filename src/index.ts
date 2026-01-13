@@ -7,6 +7,9 @@ export * from './find.js'
 export * from './parse-nodes.js'
 export * from './stringify-nodes.js'
 
+export * from './parse-fragment.js'
+export * from './stringify-fragment.js'
+
 export * from './remove-all-children.js'
 export * from './remove-attributes.js'
 
