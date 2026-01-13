@@ -1,12 +1,12 @@
-import { stringify } from '@src/stringify.js'
+import { stringifyNodes } from '@src/stringify-nodes.js'
 import { createDOMParser } from '@src/create-dom-parser.js'
 
-describe('stringify', () => {
+describe('stringifyNodes', () => {
   test('nodes in current document', () => {
     const div = document.createElement('div')
     const span = document.createElement('span')
 
-    const result = stringify([div, span])
+    const result = stringifyNodes([div, span])
 
     expect(result).toBe('<div></div><span></span>')
   })
@@ -17,7 +17,7 @@ describe('stringify', () => {
     const div = document.createElement('div')
     const span = document.createElement('span')
 
-    const result = stringify([div, span])
+    const result = stringifyNodes([div, span])
 
     expect(result).toBe('<div></div><span></span>')
   })
@@ -26,7 +26,7 @@ describe('stringify', () => {
     const div = document.createElement('div')
     div.textContent = 'hello\nworld'
 
-    const result = stringify([div])
+    const result = stringifyNodes([div])
 
     expect(result).toBe('<div>hello\nworld</div>')
   })
@@ -35,7 +35,7 @@ describe('stringify', () => {
     const div = document.createElement('div')
     div.setAttribute('name', 'value')
 
-    const result = stringify([div])
+    const result = stringifyNodes([div])
 
     expect(result).toBe('<div name="value"></div>')
   })

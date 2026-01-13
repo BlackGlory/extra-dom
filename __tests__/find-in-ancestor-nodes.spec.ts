@@ -1,5 +1,5 @@
 import { findInAncestorNodes } from '@src/find-in-ancestor-nodes.js'
-import { parse } from '@src/parse.js'
+import { parseNodes } from '@src/parse-nodes.js'
 
 describe(`
   findInAncestorNodes(
@@ -9,7 +9,7 @@ describe(`
 `, () => {
   describe('found', () => {
     it('returns the first matched node', () => {
-      const root = parse('<div><div><span></span></div><div>')[0]
+      const root = parseNodes('<div><div><span></span></div><div>')[0]
       const node = (root as Element).querySelector('span')!
 
       const result = findInAncestorNodes(node, node => node.nodeName === 'DIV')
@@ -20,7 +20,7 @@ describe(`
 
   describe('not found', () => {
     it('returns undefined', () => {
-      const root = parse('<article><span></span><article>')[0]
+      const root = parseNodes('<article><span></span><article>')[0]
       const node = (root as Element).querySelector('span')!
 
       const result = findInAncestorNodes(node, node => node.nodeName === 'SPAN')

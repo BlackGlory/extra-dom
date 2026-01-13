@@ -1,10 +1,10 @@
 import { findInDescendantNodes } from '@src/find-in-descendant-nodes.js'
-import { parse } from '@src/parse.js'
+import { parseNodes } from '@src/parse-nodes.js'
 
 describe('findInDescendantNodes(node: Node, predicate: (node: ChildNode) => unknown): ChildNode | undefined', () => {
   describe('found', () => {
     it('returns the first matched node', () => {
-      const root = parse('<div><div></div><div></div><div>')[0]
+      const root = parseNodes('<div><div></div><div></div><div>')[0]
 
       const result = findInDescendantNodes(root, node => node.nodeName === 'DIV')
 
@@ -14,7 +14,7 @@ describe('findInDescendantNodes(node: Node, predicate: (node: ChildNode) => unkn
 
   describe('not found', () => {
     it('returns undefined', () => {
-      const root = parse('<div><div></div><div></div></div>')[0]
+      const root = parseNodes('<div><div></div><div></div></div>')[0]
 
       const result = findInDescendantNodes(root, node => node.nodeName === 'SPAN')
 

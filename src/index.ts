@@ -4,9 +4,8 @@ export * from './filter.js'
 export * from './unwrap.js'
 export * from './find.js'
 
-export * from './parse.js'
-export * from './stringify.js'
-export * from './normalize.js'
+export * from './parse-nodes.js'
+export * from './stringify-nodes.js'
 
 export * from './remove-all-children.js'
 export * from './remove-attributes.js'

@@ -1,10 +1,10 @@
 import { unwrap } from '@src/unwrap.js'
-import { parse } from '@src/parse.js'
-import { stringify } from '@src/stringify.js'
+import { parseNodes } from '@src/parse-nodes.js'
+import { stringifyNodes } from '@src/stringify-nodes.js'
 
 describe('unwrap', () => {
   it('is preorder', () => {
-    const root = parse('<p><em>text</em></p>')[0]
+    const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result: string[] = []
     unwrap(root, node => {
@@ -16,7 +16,7 @@ describe('unwrap', () => {
   })
 
   it('is DFS', () => {
-    const root = parse('<p><em>deep</em>shallow</p>')[0]
+    const root = parseNodes('<p><em>deep</em>shallow</p>')[0]
 
     const result: string[] = []
     unwrap(root, node => {
@@ -28,7 +28,7 @@ describe('unwrap', () => {
   })
 
   it('clone nodes', () => {
-    const root = parse('<p><em>text</em></p>')[0]
+    const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result = unwrap(root, _ => false)!
 
@@ -37,10 +37,10 @@ describe('unwrap', () => {
   })
 
   it('unwrap', () => {
-    const root = parse('<div><span>text</span></div>')[0]
+    const root = parseNodes('<div><span>text</span></div>')[0]
 
     const result = unwrap(root, node => node instanceof Element)
 
-    expect(stringify(result)).toBe('text')
+    expect(stringifyNodes(result)).toBe('text')
   })
 })

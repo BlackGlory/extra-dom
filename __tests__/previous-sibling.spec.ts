@@ -1,10 +1,10 @@
 import { previousSibling } from '@src/previous-sibling.js'
-import { parse } from '@src/parse.js'
+import { parseNodes } from '@src/parse-nodes.js'
 
 describe('previousSibling(node: Node, distance: number): ChildNode | undefined', () => {
   describe('found', () => {
     it('returns the node by distance', () => {
-      const nodes = parse('<p></p><p></p><p></p>')
+      const nodes = parseNodes('<p></p><p></p><p></p>')
 
       const result = previousSibling(nodes[2], 2)
 
@@ -14,7 +14,7 @@ describe('previousSibling(node: Node, distance: number): ChildNode | undefined',
 
   describe('not found', () => {
     it('returns undefined', () => {
-      const nodes = parse('<p></p>')
+      const nodes = parseNodes('<p></p>')
 
       const result = previousSibling(nodes[0], 1)
 

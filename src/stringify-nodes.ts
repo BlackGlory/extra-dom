@@ -1,7 +1,7 @@
 import { isElement } from './is-element.js'
 import { isTextNode } from './is-text-node.js'
 
-export function stringify(nodes: Node[]): string {
+export function stringifyNodes(nodes: Node[]): string {
   return nodes
     .map(node => {
       if (isElement(node)) return node.outerHTML

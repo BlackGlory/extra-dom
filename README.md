@@ -48,22 +48,15 @@ function find(node: Node, predicate: (node: Node) => unknown): Node | undefined
 
 Traverse the node tree and do `find`.
 
-### parse
+### parseNodes
 ```ts
-function parse(html: string): Node[]
+function parseNodes(html: string): Node[]
 ```
 
-### stringify
+### stringifyNodes
 ```ts
-function stringify(nodes: Node[]): string
+function stringifyNodes(nodes: Node[]): string
 ```
-
-### normalize
-```ts
-function normalize(html: string): string
-```
-
-It is the shortcut for `stringify(parse(html))`.
 
 ### removeAllChildren
 ```ts

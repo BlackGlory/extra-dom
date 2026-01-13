@@ -1,10 +1,10 @@
 import { map } from '@src/map.js'
-import { parse } from '@src/parse.js'
-import { stringify } from '@src/stringify.js'
+import { parseNodes } from '@src/parse-nodes.js'
+import { stringifyNodes } from '@src/stringify-nodes.js'
 
 describe('map', () => {
   it('is preorder', () => {
-    const root = parse('<p><em>text</em></p>')[0]
+    const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result: string[] = []
     map(root, node => {
@@ -16,7 +16,7 @@ describe('map', () => {
   })
 
   it('is DFS', () => {
-    const root = parse('<p><em>deep</em>shallow</p>')[0]
+    const root = parseNodes('<p><em>deep</em>shallow</p>')[0]
 
     const result: string[] = []
     map(root, node => {
@@ -28,7 +28,7 @@ describe('map', () => {
   })
 
   it('clone nodes', () => {
-    const root = parse('<p><em>text</em></p>')[0]
+    const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result = map(root, node => node)
 
@@ -37,7 +37,7 @@ describe('map', () => {
   })
 
   it('map', () => {
-    const root = parse('<p><em>text</em></p>')[0]
+    const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result = map(root, node => {
       if (node.nodeName === 'EM') {
@@ -47,6 +47,6 @@ describe('map', () => {
       }
     })
 
-    expect(stringify([result])).toBe('<p>text</p>')
+    expect(stringifyNodes([result])).toBe('<p>text</p>')
   })
 })
