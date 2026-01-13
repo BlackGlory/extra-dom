@@ -10,6 +10,6 @@ describe('traverseAncestorNodes(node: Node): Iterable<Node & ParentNode>', () =>
     const iter = traverseAncestorNodes(node)
     const nodeNames = toArray(map(iter, x => x.nodeName))
 
-    expect(nodeNames).toEqual(['EM', 'P', 'DIV']) // DIV from parse()
+    expect(nodeNames).toEqual(['EM', 'P', '#document-fragment']) // fragment from parse()
   })
 })

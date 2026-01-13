@@ -1,5 +1,5 @@
 export function parse(html: string): Node[] {
-  const div = document.createElement('div')
-  div.innerHTML = html
-  return [...div.childNodes]
+  const template = document.createElement('template')
+  template.innerHTML = html
+  return [...template.content.childNodes]
 }
