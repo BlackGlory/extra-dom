@@ -1,3 +1,4 @@
+import { describe, test, expect, beforeEach } from 'vitest'
 import { getBySelector } from '@src/get-by-selector.js'
 import { getError } from 'return-style'
 
@@ -6,22 +7,18 @@ beforeEach(() => {
 })
 
 describe('getBySelector', () => {
-  describe('the element exists', () => {
-    it('return the element', () => {
-      const element = document.createElement('main')
-      document.body.append(element)
+  test('exists', () => {
+    const element = document.createElement('main')
+    document.body.append(element)
 
-      const result = getBySelector('main')
+    const result = getBySelector('main')
 
-      expect(result).toBe(element)
-    })
+    expect(result).toBe(element)
   })
 
-  describe('the element does not exist', () => {
-    it('throws Error', () => {
-      const err = getError(() => getBySelector('main'))
+  test('does not exist', () => {
+    const err = getError(() => getBySelector('main'))
 
-      expect(err).toBeInstanceOf(Error)
-    })
+    expect(err).toBeInstanceOf(Error)
   })
 })

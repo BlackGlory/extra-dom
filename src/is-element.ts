@@ -1,7 +1,7 @@
 import { NodeType } from './node-type.js'
-import { isObject } from '@blackglory/types'
+import { isObject } from '@blackglory/prelude'
 
-export function isElement(val: any): val is Element {
+export function isElement(val: unknown): val is Element {
   return (
            'HTMLElement' in globalThis &&
            val instanceof HTMLElement

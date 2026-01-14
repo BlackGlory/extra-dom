@@ -1,4 +1,4 @@
-import { assert } from '@blackglory/errors'
+import { assert } from '@blackglory/prelude'
 
 export function nextSibling(node: Node, distance: number = 1): Node | undefined {
   assert(Number.isInteger(distance), 'parameter distance must be an integer')

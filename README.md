@@ -50,7 +50,7 @@ Traverse the node tree and do `find`.
 
 ### parseNodes
 ```ts
-function parseNodes(html: string): Node[]
+function parseNodes(htmlFragment: string): Node[]
 ```
 
 ### stringifyNodes
@@ -60,12 +60,12 @@ function stringifyNodes(nodes: Node[]): string
 
 ### parseFragment
 ```ts
-function parseFragment(html: string): DocumentFragment 
+function parseFragment(htmlFragment: string): DocumentFragment
 ```
 
 ### stringifyFragment
 ```ts
-function stringifyFragment(fragment: DocumentFragment): string 
+function stringifyFragment(fragment: DocumentFragment): string
 ```
 
 ### removeAllChildren
@@ -172,7 +172,7 @@ function previousElementSibling(node: Node, distance: number = 1): Element | und
 
 ### isDocument
 ```ts
-function isDocument(val: any): val is Document
+function isDocument(val: unknown): val is Document
 ```
 
 ### isntDocument
@@ -182,7 +182,7 @@ function isntDocument<T>(val: T): val is Exclude<T, Document>
 
 ### isElement
 ```ts
-function isElement(val: any): val is Element
+function isElement(val: unknown): val is Element
 ```
 
 ### isntElement
@@ -192,17 +192,17 @@ function isntElement<T>(val: T): val is Exclude<T, Element>
 
 ### isTextNode
 ```ts
-function isTextNode(val: any): val is Text
+function isTextNode(val: unknown): val is Text
 ```
 
 ### isntTextNode
 ```ts
-function isntTextNode<T>(val: any): node is Exclude<T, Text>
+function isntTextNode<T>(val: unknown): node is Exclude<T, Text>
 ```
 
 ### isNode
 ```ts
-function isNode(val: any): val is Node
+function isNode(val: unknown): val is Node
 ```
 
 ### isntNode
@@ -212,12 +212,12 @@ function isntNode<T>(val: T): val is Exclude<T, Node>
 
 ### isParentNode
 ```ts
-function isParentNode(val: any): val is Node & ParentNode
+function isParentNode(val: unknown): val is Node & ParentNode
 ```
 
 ### isntParentNode
 ```ts
-function isntParentNode<T>(val: any): val is Exclude<T, Node & ParentNode>
+function isntParentNode<T>(val: unknown): val is Exclude<T, Node & ParentNode>
 ```
 
 ### isBefore

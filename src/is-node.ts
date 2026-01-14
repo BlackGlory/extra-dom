@@ -1,6 +1,6 @@
-import { isObject } from '@blackglory/types'
+import { isObject } from '@blackglory/prelude'
 
-export function isNode(val: any): val is Node {
+export function isNode(val: unknown): val is Node {
   return (
            'Node' in globalThis &&
            val instanceof Node

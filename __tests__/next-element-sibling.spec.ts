@@ -1,24 +1,21 @@
+import { describe, test, expect } from 'vitest'
 import { nextElementSibling } from '@src/next-element-sibling.js'
 import { parseNodes } from '@src/parse-nodes.js'
 
-describe('nextElementSibling(node: Node, distance: number): Element | undefined', () => {
-  describe('found', () => {
-    it('returns the element by distance', () => {
-      const nodes = parseNodes('<p></p>text<p></p>text<p></p>')
+describe('nextElementSibling', () => {
+  test('found', () => {
+    const nodes = parseNodes('<p></p>text<p></p>text<p></p>')
 
-      const result = nextElementSibling(nodes[0], 2)
+    const result = nextElementSibling(nodes[0], 2)
 
-      expect(result).toBe(nodes[4])
-    })
+    expect(result).toBe(nodes[4])
   })
 
-  describe('not found', () => {
-    it('returns undefined', () => {
-      const nodes = parseNodes('<p></p>text')
+  test('not found', () => {
+    const nodes = parseNodes('<p></p>text')
 
-      const result = nextElementSibling(nodes[0], 1)
+    const result = nextElementSibling(nodes[0], 1)
 
-      expect(result).toBeUndefined()
-    })
+    expect(result).toBeUndefined()
   })
 })

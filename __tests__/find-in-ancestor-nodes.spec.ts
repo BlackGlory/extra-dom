@@ -1,31 +1,26 @@
+import { describe, test, expect } from 'vitest'
 import { findInAncestorNodes } from '@src/find-in-ancestor-nodes.js'
 import { parseNodes } from '@src/parse-nodes.js'
+import { assert } from '@blackglory/prelude'
 
-describe(`
-  findInAncestorNodes(
-    node: Node
-  , predicate: (node: Node & ParentNode) => unknown
-  ): (Node & ParentNode) | undefined
-`, () => {
-  describe('found', () => {
-    it('returns the first matched node', () => {
-      const root = parseNodes('<div><div><span></span></div><div>')[0]
-      const node = (root as Element).querySelector('span')!
+describe('findInAncestorNodes', () => {
+  test('found', () => {
+    const root = parseNodes('<div><div><span></span></div><div>')[0]
+    const node = (root as Element).querySelector('span')
+    assert(node)
 
-      const result = findInAncestorNodes(node, node => node.nodeName === 'DIV')
+    const result = findInAncestorNodes(node, node => node.nodeName === 'DIV')
 
-      expect(result).toBe(root.childNodes[0])
-    })
+    expect(result).toBe(root.childNodes[0])
   })
 
-  describe('not found', () => {
-    it('returns undefined', () => {
-      const root = parseNodes('<article><span></span><article>')[0]
-      const node = (root as Element).querySelector('span')!
+  test('not found', () => {
+    const root = parseNodes('<article><span></span><article>')[0]
+    const node = (root as Element).querySelector('span')
+    assert(node)
 
-      const result = findInAncestorNodes(node, node => node.nodeName === 'SPAN')
+    const result = findInAncestorNodes(node, node => node.nodeName === 'SPAN')
 
-      expect(result).toBeUndefined()
-    })
+    expect(result).toBeUndefined()
   })
 })

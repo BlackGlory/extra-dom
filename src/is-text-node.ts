@@ -1,7 +1,7 @@
 import { NodeType } from './node-type.js'
-import { isObject } from '@blackglory/types'
+import { isObject } from '@blackglory/prelude'
 
-export function isTextNode(val: any): val is Text {
+export function isTextNode(val: unknown): val is Text {
   return (
            'Text' in globalThis &&
            val instanceof Text

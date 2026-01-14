@@ -1,3 +1,4 @@
+import { describe, test, expect, beforeEach } from 'vitest'
 import { getAllBySelector } from '@src/get-all-by-selector.js'
 import { getError } from 'return-style'
 
@@ -6,22 +7,18 @@ beforeEach(() => {
 })
 
 describe('getAllBySelector', () => {
-  describe('the elements exist', () => {
-    it('return the element', () => {
-      const element = document.createElement('main')
-      document.body.append(element)
+  test('exist', () => {
+    const element = document.createElement('main')
+    document.body.append(element)
 
-      const result = getAllBySelector('main')
+    const result = getAllBySelector('main')
 
-      expect(result).toStrictEqual([element])
-    })
+    expect(result).toStrictEqual([element])
   })
 
-  describe('the elements do not exist', () => {
-    it('throw Error', () => {
-      const err = getError(() => getAllBySelector('main'))
+  test('do not exist', () => {
+    const err = getError(() => getAllBySelector('main'))
 
-      expect(err).toBeInstanceOf(Error)
-    })
+    expect(err).toBeInstanceOf(Error)
   })
 })

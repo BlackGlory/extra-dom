@@ -1,6 +1,6 @@
 import { flatMap } from './flat-map.js'
 import * as Iter from 'iterable-operator'
-import { pipe } from 'extra-utils'
+import { pipe } from '@blackglory/prelude'
 
 export function unwrap(node: Node, predicate: (node: Node) => unknown): Node[] {
   return flatMap(node, node => {

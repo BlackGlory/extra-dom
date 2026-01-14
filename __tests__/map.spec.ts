@@ -1,9 +1,11 @@
+import { describe, test, expect } from 'vitest'
 import { map } from '@src/map.js'
 import { parseNodes } from '@src/parse-nodes.js'
 import { stringifyNodes } from '@src/stringify-nodes.js'
+import { assert } from '@blackglory/prelude'
 
 describe('map', () => {
-  it('is preorder', () => {
+  test('preorder', () => {
     const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result: string[] = []
@@ -12,22 +14,25 @@ describe('map', () => {
       return node
     })
 
-    expect(result).toEqual(['P', 'EM', '#text'])
+    expect(result).toStrictEqual(['P', 'EM', '#text'])
   })
 
-  it('is DFS', () => {
+  test('DFS', () => {
     const root = parseNodes('<p><em>deep</em>shallow</p>')[0]
 
     const result: string[] = []
     map(root, node => {
-      if (node.nodeType === Node.TEXT_NODE) result.push(node.textContent!)
+      if (node.nodeType === Node.TEXT_NODE) {
+        assert(node.textContent)
+        result.push(node.textContent)
+      }
       return node
     })
 
-    expect(result).toEqual(['deep', 'shallow'])
+    expect(result).toStrictEqual(['deep', 'shallow'])
   })
 
-  it('clone nodes', () => {
+  test('clone nodes', () => {
     const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result = map(root, node => node)
@@ -36,7 +41,7 @@ describe('map', () => {
     expect(result.isEqualNode(root)).toBeTruthy()
   })
 
-  it('map', () => {
+  test('map', () => {
     const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result = map(root, node => {

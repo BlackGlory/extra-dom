@@ -1,5 +1,5 @@
 import { isElement } from './is-element.js'
-import { assert } from '@blackglory/errors'
+import { assert } from '@blackglory/prelude'
 
 export function previousElementSibling(
   node: Node

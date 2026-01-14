@@ -1,37 +1,42 @@
+import { describe, test, expect } from 'vitest'
 import { isNode } from '@src/is-node.js'
 
 describe('isNode', () => {
-  describe('val is node', () => {
-    it('return true', () => {
-      const val = document.createElement('div')
+  test('val is node', () => {
+    const val = document.createElement('div')
+
+    const result = isNode(val)
+
+    expect(result).toBe(true)
+  })
+
+  test('val isnt node', () => {
+    const val = null
+
+    const result = isNode(val)
+
+    expect(result).toBe(false)
+  })
+
+  describe('node from DOMParser', () => {
+    test('val is node', () => {
+      const parser = new DOMParser()
+      const doc = parser.parseFromString('', 'text/html')
+      const val = doc.createElement('div')
 
       const result = isNode(val)
 
       expect(result).toBe(true)
     })
-  })
 
-  describe('val isnt node', () => {
-    it('return false', () => {
-      const val = {}
+    test('val isnt node', () => {
+      const parser = new DOMParser()
+      const doc = parser.parseFromString('', 'text/html')
+      const val = doc.createComment('comment')
 
       const result = isNode(val)
 
-      expect(result).toBe(false)
-    })
-  })
-
-  describe('node from DOMParser', () => {
-    describe('val is node', () => {
-      it('return true', () => {
-        const parser = new DOMParser()
-        const doc = parser.parseFromString('', 'text/html')
-        const val = doc.createElement('div')
-
-        const result = isNode(val)
-
-        expect(result).toBe(true)
-      })
+      expect(result).toBe(true)
     })
   })
 })

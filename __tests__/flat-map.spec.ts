@@ -1,9 +1,11 @@
+import { describe, test, expect } from 'vitest'
 import { flatMap } from '@src/flat-map.js'
 import { parseNodes } from '@src/parse-nodes.js'
 import { stringifyNodes } from '@src/stringify-nodes.js'
+import { assert } from '@blackglory/prelude'
 
 describe('flatMap', () => {
-  it('is preorder', () => {
+  test('preorder', () => {
     const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result: string[] = []
@@ -12,22 +14,25 @@ describe('flatMap', () => {
       return [node]
     })
 
-    expect(result).toEqual(['P', 'EM', '#text'])
+    expect(result).toStrictEqual(['P', 'EM', '#text'])
   })
 
-  it('is DFS', () => {
+  test('DFS', () => {
     const root = parseNodes('<p><em>deep</em>shallow</p>')[0]
 
     const result: string[] = []
     flatMap(root, node => {
-      if (node.nodeType === Node.TEXT_NODE) result.push(node.textContent!)
+      if (node.nodeType === Node.TEXT_NODE) {
+        assert(node.textContent)
+        result.push(node.textContent)
+      }
       return [node]
     })
 
-    expect(result).toEqual(['deep', 'shallow'])
+    expect(result).toStrictEqual(['deep', 'shallow'])
   })
 
-  it('clone nodes', () => {
+  test('clone nodes', () => {
     const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result = flatMap(root, node => [node])
@@ -36,7 +41,7 @@ describe('flatMap', () => {
     expect(result[0].isEqualNode(root)).toBeTruthy()
   })
 
-  it('flat-map', () => {
+  test('flat-map', () => {
     const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result = flatMap(root, node => {
@@ -54,13 +59,11 @@ describe('flatMap', () => {
     expect(stringifyNodes(result)).toBe('<p>hello world</p>')
   })
 
-  describe('edges', () => {
-    it('can return the same nodes', () => {
-      const root = parseNodes('<p>before<em>text</em>after</p>')[0]
+  test('edges', () => {
+    const root = parseNodes('<p>before<em>text</em>after</p>')[0]
 
-      const result = flatMap(root, node => [node])
+    const result = flatMap(root, node => [node])
 
-      expect(stringifyNodes(result)).toBe('<p>before<em>text</em>after</p>')
-    })
+    expect(stringifyNodes(result)).toBe('<p>before<em>text</em>after</p>')
   })
 })

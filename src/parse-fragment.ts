@@ -1,5 +1,5 @@
-export function parseFragment(html: string): DocumentFragment {
+export function parseFragment(htmlFragment: string): DocumentFragment {
   const template = document.createElement('template')
-  template.innerHTML = html
+  template.innerHTML = htmlFragment
   return template.content
 }

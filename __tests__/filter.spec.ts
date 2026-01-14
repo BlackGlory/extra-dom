@@ -1,9 +1,11 @@
+import { describe, test, expect } from 'vitest'
 import { filter } from '@src/filter.js'
 import { parseNodes } from '@src/parse-nodes.js'
 import { stringifyNodes } from '@src/stringify-nodes.js'
+import { assert } from '@blackglory/prelude'
 
 describe('filter', () => {
-  it('is preorder', () => {
+  test('preorder', () => {
     const root = parseNodes('<p><em>text</em></p>')[0]
 
     const result: string[] = []
@@ -12,47 +14,48 @@ describe('filter', () => {
       return true
     })
 
-    expect(result).toEqual(['P', 'EM', '#text'])
+    expect(result).toStrictEqual(['P', 'EM', '#text'])
   })
 
-  it('is DFS', () => {
+  test('DFS', () => {
     const root = parseNodes('<p><em>deep</em>shallow</p>')[0]
 
     const result: string[] = []
     filter(root, node => {
-      if (node.nodeType === Node.TEXT_NODE) result.push(node.textContent!)
+      if (node.nodeType === Node.TEXT_NODE) {
+        assert(node.textContent)
+        result.push(node.textContent)
+      }
       return true
     })
 
-    expect(result).toEqual(['deep', 'shallow'])
+    expect(result).toStrictEqual(['deep', 'shallow'])
   })
 
-  it('clone nodes', () => {
+  test('clone nodes', () => {
     const root = parseNodes('<p><em>text</em></p>')[0]
 
-    const result = filter(root, _ => true)!
+    const result = filter(root, _ => true)
 
+    assert(result)
     expect(result).not.toBe(root)
     expect(result.isEqualNode(root)).toBeTruthy()
   })
 
-  describe('reject children', () => {
-    it('return Node', () => {
-      const root = parseNodes('<p><em></em></p>')[0]
+  test('reject children', () => {
+    const root = parseNodes('<p><em></em></p>')[0]
 
-      const result = filter(root, node => node.nodeName !== 'EM')!
+    const result = filter(root, node => node.nodeName !== 'EM')
 
-      expect(stringifyNodes([result])).toBe('<p></p>')
-    })
+    assert(result)
+    expect(stringifyNodes([result])).toBe('<p></p>')
   })
 
-  describe('reject root', () => {
-    it('return undefined', () => {
-      const root = parseNodes('<p><em></em></p>')[0]
+  test('reject root', () => {
+    const root = parseNodes('<p><em></em></p>')[0]
 
-      const result = filter(root, node => node.nodeName !== 'P')
+    const result = filter(root, node => node.nodeName !== 'P')
 
-      expect(result).toBeUndefined()
-    })
+    expect(result).toBeUndefined()
   })
 })

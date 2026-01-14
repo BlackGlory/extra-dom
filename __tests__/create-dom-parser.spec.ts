@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import { createDOMParser } from '@src/create-dom-parser.js'
 
 test('createDOMParser', () => {
