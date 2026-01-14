@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/BlackGlory/extra-dom/compare/v0.6.2...v0.7.0) (2026-01-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* Node.js v16 => v22
+* - Renamed `parse` to `parseNodes`.
+- Renamed `stringify` to `stringifyNodes`.
+- Removed `normalize`.
+
+### Features
+
+* add `parseFragment`, `stringifyFragment` ([689841d](https://github.com/BlackGlory/extra-dom/commit/689841da9a8a7f97b79cb24266ee059eab308482))
+* rename `parse`, `stringify`, remove `normalize` ([de6c969](https://github.com/BlackGlory/extra-dom/commit/de6c9690b90e23342c6424803e26631d48a6adea))
+
+
+* upgrade dependencies ([cafb591](https://github.com/BlackGlory/extra-dom/commit/cafb5912c59ace71856a1f02d12c9c2243b1ca78))
+
 ### [0.6.2](https://github.com/BlackGlory/extra-dom/compare/v0.6.1...v0.6.2) (2025-08-29)
 
 
