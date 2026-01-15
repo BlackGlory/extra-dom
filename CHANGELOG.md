@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://github.com/BlackGlory/extra-dom/compare/v0.7.0...v0.7.1) (2026-01-15)
+
+
+### Bug Fixes
+
+* **remove-attributes:** replace `instanceof Element` with `isElement` ([791ef97](https://github.com/BlackGlory/extra-dom/commit/791ef976e13cb6b1d920caf0e3577cdf4c56085f))
+
 ## [0.7.0](https://github.com/BlackGlory/extra-dom/compare/v0.6.2...v0.7.0) (2026-01-14)
 
 
