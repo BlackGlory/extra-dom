@@ -4,10 +4,9 @@ import { parseNodes } from '@src/parse-nodes.js'
 import { stringifyNodes } from '@src/stringify-nodes.js'
 
 test('removeAttributes', () => {
-  const node = parseNodes('<div id="main">content</div>')[0]
+  const node = parseNodes('<div foo="bar" bar="baz">text</div>')[0]
 
-  const result = removeAttributes(node, x => x === 'id')
+  removeAttributes(node, x => x === 'foo')
 
-  expect(result).toBeUndefined()
-  expect(stringifyNodes([node])).toBe('<div>content</div>')
+  expect(stringifyNodes([node])).toBe('<div bar="baz">text</div>')
 })

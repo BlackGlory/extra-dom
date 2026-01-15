@@ -75,7 +75,10 @@ function removeAllChildren(node: Node): void
 
 ### removeAttributes
 ```ts
-function removeAttributes(node: Node, predicate: (name: string) => unknown): void
+function removeAttributes(
+  node: Node
+, predicate: (attributeName: string) => unknown
+): void
 ```
 
 ### getBySelector
