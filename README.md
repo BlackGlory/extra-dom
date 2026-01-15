@@ -77,7 +77,7 @@ function removeAllChildren(node: Node): void
 ```ts
 function removeAttributes(
   node: Node
-, predicate: (attributeName: string) => unknown
+, predicate?: (attributeName: string) => unknown
 ): void
 ```
 
