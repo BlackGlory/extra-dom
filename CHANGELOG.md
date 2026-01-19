@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.3](https://github.com/BlackGlory/extra-dom/compare/v0.7.2...v0.7.3) (2026-01-19)
+
+
+### Features
+
+* add `traverseFollowingSiblingNodes`, `traversePrecedingSiblingNodes` ([16e3a0c](https://github.com/BlackGlory/extra-dom/commit/16e3a0ce621b2105d7548c90e673233d3351709e))
+
 ### [0.7.2](https://github.com/BlackGlory/extra-dom/compare/v0.7.1...v0.7.2) (2026-01-15)
 
 
