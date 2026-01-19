@@ -115,6 +115,21 @@ function traverseAncestorNodes(node: Node): Iterable<Node & ParentNode>
 function traverseDescendantNodes(node: Node): Iterable<ChildNode>
 ```
 
+### traversePrecedingSiblingNodes
+```ts
+function traversePrecedingSiblingNodes(node: Node): Iterable<Node>
+```
+
+### traverseFollowingSiblingNodes
+```ts
+function traverseFollowingSiblingNodes(node: Node): Iterable<Node>
+```
+
+### traverseDescendantNodes
+```ts
+function traverseDescendantNodes(node: Node): Iterable<ChildNode>
+```
+
 ### findInAncestorNodes
 ```ts
 function findInAncestorNodes(

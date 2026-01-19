@@ -22,7 +22,10 @@ export * from './find-in-ancestor-nodes.js'
 export * from './traverse-descendant-nodes.js'
 export * from './find-in-descendant-nodes.js'
 
+export * from './traverse-following-sibling-nodes.js'
 export * from './find-in-following-sibling-nodes.js'
+
+export * from './traverse-preceding-sibling-nodes.js'
 export * from './find-in-preceding-sibling-nodes.js'
 
 export * from './parent-node.js'
